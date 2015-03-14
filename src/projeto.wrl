@@ -8,12 +8,18 @@ Transform{
 
         #norte
         Transform {
-            children[
+            translation 0.0 -3 -10
+            children [
+                DEF Rua Inline { url "rua.wrl" }
                 Transform {
-                    translation 0.0 -3 -10
-                    children DEF Rua Inline { url "rua.wrl" }
+                    translation 3.7 0 0
+                    rotation 0 1 0 -1.57
+                    children [
+                        Inline { url "predio4.wrl" }
+                    ]
                 }
             ]
+
         }
 
         #sul
@@ -32,6 +38,12 @@ Transform{
             translation -11.5 -3 -22
             children [
                 USE Rua
+                Transform {
+                    translation 5 0 -6.6
+                    children [
+                        Inline { url "predio1.wrl"}
+                    ]
+                }
             ]
         }
 

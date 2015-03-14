@@ -1,0 +1,19 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+# Prédio 3 - http://blog.vostu.com/megacity-es/files/2011/12/Flatiron-en-MegaCity-y-de-JvL-en-Flickr.jpg
+Transform {
+	translation 0 .1 0
+	children [
+		# Rua
+		Shape {
+			appearance Appearance {
+				material Material { 
+					diffuseColor .7 .7 .7
+				}
+			}
+			geometry Box {
+				size 5 .2 20
+			}
+	  	}
+  	]
+}

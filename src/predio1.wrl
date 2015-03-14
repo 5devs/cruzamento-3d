@@ -1,0 +1,120 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+# Prédio 1 - http://www.expoimovel.com/imagens_classificados/108698_Perspectiva.jpg
+Transform {
+	translation 0 .25 0
+	children [
+		# Rua
+		DEF estacionamento Shape {
+			appearance Appearance {
+				material Material { 
+					diffuseColor .7 .7 .7
+				}
+			}
+			geometry Box {
+				size 5 .5 5
+			}
+	  	}
+	  	Transform {
+	  		translation 0 .75 0
+	  		children [
+	  			USE estacionamento
+	  			Transform {
+	  				translation 0 5.5 0
+	  				children [
+	  					Shape {
+	  						appearance Appearance {
+	  							material Material {
+	  								diffuseColor .7 .7 .7
+	  							}
+	  						}
+	  						geometry Box {
+	  							size 3.5 10 3.5
+	  						}
+	  					}
+
+	  					Transform {
+	  						translation 0 5.4 0
+	  						children [
+	  							Shape {
+	  								appearance Appearance {
+			  							material Material {
+			  								diffuseColor .7 .7 .7
+			  							}
+	  								}
+	  								geometry Box {
+	  									size 1.5 .8 1
+	  								}
+	  							}
+	  						]
+	  					}
+	  				]
+	  			}
+
+	  			Transform {
+			  		translation 1.5 .5 1.5
+			  		children [
+			  			DEF coluna Shape {
+			  				appearance Appearance {
+								material Material { 
+									diffuseColor .7 .7 .7
+								}
+							}
+							geometry Cylinder {
+								height .5
+								radius .1
+							}			
+			  			}
+			  		]
+			  	}
+
+			  	Transform {
+			  		translation -1.5 .5 1.5
+			  		children [
+			  			USE coluna 
+			  		]
+			  	} 
+			  	Transform {
+			  		translation 1.5 .5 -1.5
+			  		children [
+			  			USE coluna 
+			  		]
+			  	} 
+			  	Transform {
+			  		translation -1.5 .5 -1.5
+			  		children [
+			  			USE coluna 
+			  		]
+			  	} 
+	  		]
+	  	}
+
+	  	Transform {
+	  		translation 2 .5 2
+	  		children [
+	  			USE coluna 
+	  		]
+	  	} 
+
+	  	Transform {
+	  		translation -2 .5 2
+	  		children [
+	  			USE coluna
+	  		]
+	  	}
+
+	  	Transform {
+	  		translation -2 .5 -2
+	  		children [
+	  			USE coluna
+	  		]
+	  	}
+
+	  	Transform {
+	  		translation 2 .5 -2
+	  		children [
+	  			USE coluna
+	  		]
+	  	}
+  	]
+}

@@ -37,6 +37,21 @@ Transform {
 					  				Inline { url "semaforo.wrl" }
 								]
 					  		}
+				  			# Arvore 1 - Normal
+				  			Transform {
+				  				translation 0 0 7
+				  				scale .7 .7 .7
+				  				children [
+				  					Inline { url "arvore.wrl" }
+				  				]
+				  			}
+				  			# Arvore 2 - Normal
+				  			Transform {
+				  				translation 0 0 -3
+				  				children [
+				  					Inline { url "arvore.wrl" }
+				  				]
+				  			}
 					  	]
 					  }
 				  ]
@@ -46,6 +61,27 @@ Transform {
 		  		translation -2 0 0
 		  		children [
 		  			USE Calcada
+		  			# Arvore 1 - Pinheiro
+		  			Transform {
+		  				scale 1.5 1.8 1.5
+		  				children [
+		  					Inline { url "arvore-pinheiro.wrl" }
+		  				]
+		  			}
+		  			# Arvore 2 - Pinheiro
+		  			Transform {
+		  				translation 0 0 -7
+		  				children [
+		  					Inline { url "arvore-pinheiro.wrl" }
+		  				]
+		  			}
+		  			# Arvore 3 - Normal
+		  			Transform {
+		  				translation 0 0 5
+		  				children [
+		  					Inline { url "arvore.wrl" }
+		  				]
+		  			}
 		  		]
 		  	}
 			

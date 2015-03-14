@@ -1,0 +1,17 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+# Prédio 2 - http://www.pensamentoverde.com.br/wp-content/uploads/2013/10/Edif%C3%ADcio_Tri%C3%A2ngulo_02.jpg
+Transform {
+	translation 0 .1 0
+	children [
+		# Rua
+		Shape {
+			appearance Appearance {
+				material Material { 
+					diffuseColor .7 .7 .7
+				}
+			}
+			geometry Box { size 5 .2 20 }
+	  	}
+  	]
+}
