@@ -4,6 +4,7 @@
 Transform {
 	translation 0 .1 0
 	children [
+		# Rua
 		Shape {
 			appearance Appearance {
 				material Material { 
@@ -13,150 +14,203 @@ Transform {
 			geometry Box { size 5 .2 20 }
 	  	}
 	  	Transform {
-	  		translation 2 .1 0
-			children [
-			  	DEF Calcada Shape {
-					  appearance Appearance {
-					    material Material { 
-					      diffuseColor .7 .7 .9
-					    }
+	  		translation 0 .11 0
+	  		children [
+		  	Transform {
+		  		translation 2 0 0
+				children [
+				  	DEF Calcada Shape {
+						  appearance Appearance {
+						    material Material { 
+						      diffuseColor .7 .7 .9
+						    }
+						  }
+						  geometry Box { size 1 .1 20 }
 					  }
-					  geometry Box { size 1 .1 20 }
-				  }
-			  ]
-	  	}
-	  	Transform {
-	  		translation -2 .1 0
-	  		children [
-	  			USE Calcada
-	  		]
-	  	}
-		
-  		# Linha da rua
-	  	Transform {
-	  		translation -.1 .2 -5
-	  		children [
-	  			DEF Linha Shape {
-	  				appearance Appearance {
-					  material Material {  }
-					}
-					geometry IndexedFaceSet {
-					  coord Coordinate {
-					     point [
-							# Coordenadas do cubo
-							0 0 0, 		0.0 0 -1,
-							.2 0 -1, .2 0  0.0
-					     ]
+					  Transform {
+					  	translation 0 .05 0
+					  	children [
+					  		#Semaforo
+					  		Transform {
+					  			translation 0 0 -9.5
+					  			children [
+					  				Inline { url "semaforo.wrl" }
+								]
+					  		}
+					  	]
 					  }
-				      coordIndex [
-				         0, 3, 2, 1, -1
-				      ]
-				      color Color {
-				         color [
-				            1.0 1.0 0.0
-				         ]
-				      }
-				      colorPerVertex   FALSE
-				      colorIndex  [ 
-				         0, 0, 1, 1, 2, 2, -1
-				      ]
-				    }
-	  			}
-	  		]
-	  	}
-	  	Transform {
-	  		translation -.1 .2 -3
-	  		children [
-	  			USE Linha
-	  		]
-  		}
-	  	Transform {
-	  		translation -.1 .2 -1
-	  		children [
-	  			USE Linha
-	  		]
-  		}
-	  	Transform {
-	  		translation -.1 .2 1
-	  		children [
-	  			USE Linha
-	  		]
-  		}
-	  	Transform {
-	  		translation -.1 .2 3
-	  		children [
-	  			USE Linha
-	  		]
-  		}
-	  	Transform {
-	  		translation -.1 .2 5
-	  		children [
-	  			USE Linha
-	  		]
-  		}
-	  	Transform {
-	  		translation -.1 .2 7
-	  		children [
-	  			USE Linha
-	  		]
-  		}
-	  	Transform {
-	  		translation -.1 .2 9
-	  		children [
-	  			USE Linha
-	  		]
-  		}
+				  ]
+		  	}
 
-  		# Faixa de pedestre
-	  	Transform {
-	  		translation .8 .2 -7
-	  		children [
-	  			DEF Faixa Shape {
-	  				appearance Appearance {
-					  material Material {  }
-					}
-					geometry IndexedFaceSet {
-					  coord Coordinate {
-					     point [
-							# Coordenadas do cubo
-							0 0 0, 		0.0 0 -2,
-							.4 0 -2, .4 0  0.0
-					     ]
-					  }
-				      coordIndex [
-				         0, 3, 2, 1, -1
-				      ]
-				      color Color {
-				         color [
-				            1.0 1.0 1.0
-				         ]
-				      }
-				      colorPerVertex   FALSE
-				      colorIndex  [ 
-				         0, 0, 1, 1, 2, 2, -1
-				      ]
-				    }
-	  			}
+		  	Transform {
+		  		translation -2 0 0
+		  		children [
+		  			USE Calcada
+		  		]
+		  	}
+			
+	  		# Linha da rua
+		  	Transform {
+		  		translation -.1 0 -5
+		  		children [
+		  			DEF Linha Shape {
+		  				appearance Appearance {
+						  material Material {  }
+						}
+						geometry IndexedFaceSet {
+						  coord Coordinate {
+						     point [
+								# Coordenadas do cubo
+								0 0 0,
+								0 0 -1,
+								.2 0 -1,
+								.2 0  0
+						     ]
+						  }
+					      coordIndex [
+					         0, 3, 2, 1, -1
+					      ]
+					      color Color {
+					         color [
+					            1.0 1.0 0.0
+					         ]
+					      }
+					      colorPerVertex   FALSE
+					      colorIndex  [ 
+					         0, 0, 1, 1, 2, 2, -1
+					      ]
+					    }
+		  			}
+		  		]
+		  	}
+		  	Transform {
+		  		translation -.1 0 -3
+		  		children [
+		  			USE Linha
+		  		]
+	  		}
+		  	Transform {
+		  		translation -.1 0 -1
+		  		children [
+		  			USE Linha
+		  		]
+	  		}
+		  	Transform {
+		  		translation -.1 0 1
+		  		children [
+		  			USE Linha
+		  		]
+	  		}
+		  	Transform {
+		  		translation -.1 0 3
+		  		children [
+		  			USE Linha
+		  		]
+	  		}
+		  	Transform {
+		  		translation -.1 0 5
+		  		children [
+		  			USE Linha
+		  		]
+	  		}
+		  	Transform {
+		  		translation -.1 0 7
+		  		children [
+		  			USE Linha
+		  		]
+	  		}
+		  	Transform {
+		  		translation -.1 0 9
+		  		children [
+		  			USE Linha
+		  		]
+	  		}
+
+	  		# Faixa de pedestre
+		  	Transform {
+		  		translation .8 0 -7
+		  		children [
+		  			DEF FaixaVertical Shape {
+		  				appearance Appearance {
+						  material Material {  }
+						}
+						geometry IndexedFaceSet {
+						  coord Coordinate {
+						     point [
+								# Coordenadas do cubo
+								0 0 0, 		0.0 0 -2,
+								.4 0 -2, .4 0  0.0
+						     ]
+						  }
+					      coordIndex [
+					         0, 3, 2, 1, -1
+					      ]
+					      color Color {
+					         color [
+					            1.0 1.0 1.0
+					         ]
+					      }
+					      colorPerVertex   FALSE
+					      colorIndex  [ 
+					         0, 0, 1, 1, 2, 2, -1
+					      ]
+					    }
+		  			}
+		  		]
+		  	}
+		  	Transform {
+		  		translation -1.2 0 -6.4
+		  		children [
+		  			DEF LimiteDeParada Shape {
+		  				appearance Appearance {
+						  material Material {  }
+						}
+						geometry IndexedFaceSet {
+						  coord Coordinate {
+						     point [
+								# Coordenadas do cubo
+								0 0 0,
+								2.4 0 0,
+								2.4 0 -.4,
+								0 0 -.4
+						     ]
+						  }
+					      coordIndex [
+					         0, 1, 2, 3, -1
+					      ]
+					      color Color {
+					         color [
+					            1.0 1.0 1.0
+					         ]
+					      }
+					      colorPerVertex   FALSE
+					      colorIndex  [ 
+					         0, 0, 1, 1, 2, 2, -1
+					      ]
+					    }
+		  			}
+		  		]
+		  	}
+		  	Transform {
+		  		translation .12 0 -7
+		  		children [
+		  			USE FaixaVertical
+		  		]
+	  		}
+		  	Transform {
+		  		translation -.56 0 -7
+		  		children [
+		  			USE FaixaVertical
+		  		]
+	  		}
+		  	Transform {
+		  		translation -1.24 0 -7
+		  		children [
+		  			USE FaixaVertical
+		  		]
+	  		}
 	  		]
 	  	}
-	  	Transform {
-	  		translation .12 .2 -7
-	  		children [
-	  			USE Faixa
-	  		]
-  		}
-	  	Transform {
-	  		translation -.56 .2 -7
-	  		children [
-	  			USE Faixa
-	  		]
-  		}
-	  	Transform {
-	  		translation -1.24 .2 -7
-	  		children [
-	  			USE Faixa
-	  		]
-  		}
 		
 	  ]
 }
