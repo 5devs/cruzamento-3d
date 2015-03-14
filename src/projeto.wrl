@@ -50,10 +50,16 @@ Transform{
 
         #direita
         Transform {
-            rotation 0 1 0 1.56
+            rotation 0 1 0 1.57
             translation 11.5 -3 -22
             children [
                 USE Rua
+                Transform {
+                    translation 5.5 0 -6
+                    children [
+                        Inline { url "predio2.wrl"}
+                    ]
+                }
             ]
         }
 
