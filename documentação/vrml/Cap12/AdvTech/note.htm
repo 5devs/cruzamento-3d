@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre Tecnicas Avancadas</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><I><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3>Técnicas Avançadas</FONT></I></B>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+<UL>
+<LI>Simplificação da Cena</LI>
+<BR><BR>
+<UL>
+<LI>Devem ser criados modelos com apelo visual com o uso de poucos polígonos.</LI>
+<BR><BR>
+<LI>Adicionar uma pequena textura a um polígono é mais barato do que criar vários polígonos.</LI>
+<BR><BR>
+<LI>Usar texturas mais simples de um só componente, combinadas com o material do objeto, é um meio econômico de produzir efeitos realísticos.</LI>
+<BR><BR>
+<LI>O uso de iluminação afeta o desempenho do mundo VRML. Para exibição mais rápida, efeitos de iluminação devem ser usados com moderação. Os nós <I>SpotLight</I> e <I>PointLight</I> devem ser usados para iluminar partes pequenas da cena. Deve ser usado um número pequeno de luzes direcionais, especialmente se elas forem definidas em um nível alto da hierarquia da cena.</LI>
+<BR><BR>
+<LI>Devem ser usados DEF e USE para criar múltiplas instâncias de um mesmo nó.</LI>
+</UL>
+<BR><BR>
+<LI>Modularização</LI>
+<BR><BR>
+<UL>
+<LI>Deve ser criada uma hierarquia com aninhamento de grupos dentro de grupos.</LI>
+<BR><BR>
+<LI>Os objetos devem ser organizados no arquivo VRML de acordo com sua disposição no espaço.</LI>
+<BR><BR>
+<LI>É importante especificar a <I>bounding box</I> para o nó <I>Inline</I>, para que o <I>browser</I> só precise carregar os dados quando o usuário requisitá-lo.</LI>
+</UL>
+<BR><BR>
+<LI>Otimizações</LI>
+<BR><BR>
+<UL>
+<LI>Os filhos de um nó <I>LOD</I> podem ser <I>Shape</I> ou <I>Inline</I>. O último filho de <I>LOD</I> não pode ser um nó <I>Inline</I>, porque muitos nós carregam este nó mais simples enquanto não carregam um nó mais complexo.</LI>
+<BR><BR>
+<LI>Nós como <I>ElevationGrid, Extrusion</I>  e <I>IndexedFaceSet</I> fornecem dicas para o <I>browser</I> sobre a geometria, permitindo que sejam feitas otimizações.</LI>
+<BR><BR>
+<LI>A detecção de colisão deve ser desligada sempre que possível. Podem ser usados <I>proxies</I> para facilitar os testes de colisão.</LI>
+</UL>
+<BR><BR>
+<LI>Efeitos especiais</LI>
+<BR><BR>
+<UL>
+<LI>O campo <I>visibilityInfo</I> do nó <I>NavigationInfo</I> é um meio barato de evitar a exibição de objetos distantes.</LI>
+<BR><BR>
+<LI>O nó <I>Fog</I> também pode evitar a exibição de objetos distantes.</LI>
+<BR><BR>
+<LI>O nó <I>Background</I> pode enriquecer a cena com uma paisagem de fundo, sem sobrecarregar o mundo VRML com objetos 3D.</LI>
+<BR><BR>
+<LI>A animação de coordenadas de textura através de <I>TextureTransform</I> ou de <I>TextureCoordinate</I> pode criar efeitos de movimento (água corrente, nuvens que passam) .</LI>
+<BR><BR>
+<LI>O nó <I>Background</I> pode ter cores animadas para dar a sensação de mudanças de tempo ou de horas do dia.</LI>
+</UL>
+</UL>
+</BODY>
+</HTML>

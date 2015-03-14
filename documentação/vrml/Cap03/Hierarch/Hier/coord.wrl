@@ -1,0 +1,95 @@
+#VRML V2.0 utf8
+# Sistema de coordenadas
+Group {
+children [ 
+# Eixo Y
+Group {
+	children [
+		Shape {
+			appearance Appearance { 
+						material DEF OldBlue Material {
+						   		diffuseColor 0 1 0
+						}
+			}
+			geometry Cylinder { 
+						height 2.0
+						radius 0.1
+			}
+		},
+		Transform {
+			translation 0 1.1 0
+      		children 
+				Shape {
+					appearance Appearance { 
+								material USE OldBlue					}
+					geometry Cone { 
+							bottomRadius 0.15
+							height 0.20
+					}
+				}
+		}
+	]	 			
+},
+
+#Eixo X
+Transform {
+	rotation 0 0 1 -1.57
+	children [
+		Shape {
+			appearance Appearance { 
+						material DEF OldRed Material {
+						   		diffuseColor 1 0 0
+						}
+			}
+			geometry Cylinder { 
+						height 2.0
+						radius 0.1
+			}
+		},
+		Transform {
+			translation 0 1.1 0
+      		children 
+				Shape {
+					appearance Appearance { 
+								material USE OldRed					}
+					geometry Cone { 
+							bottomRadius 0.15
+							height 0.20
+					}
+				}
+		}
+	]	 			
+},
+
+#Eixo Z
+Transform {
+	rotation 1 0 0 1.57
+	children [
+		Shape {
+			appearance Appearance { 
+						material DEF OldGreen Material {
+						   		diffuseColor 0 0 1
+						}
+			}
+			geometry Cylinder { 
+						height 2.0
+						radius 0.1
+			}
+		},
+		Transform {
+			translation 0 1.1 0
+      		children 
+				Shape {
+					appearance Appearance { 
+								material USE OldGreen					}
+					geometry Cone { 
+							bottomRadius 0.15
+							height 0.20
+					}
+				}
+		}
+	]	 			
+}
+]
+}
+

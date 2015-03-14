@@ -1,0 +1,15 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+#Exemplo - Cone
+Shape {
+  appearance Appearance {
+    material Material { 
+       diffuseColor 0 1 0 
+    }
+  }
+  geometry Cone { 
+    bottomRadius  2
+    height        1
+  }
+}
+

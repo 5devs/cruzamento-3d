@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre Nodes e Fields</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3><B>Fields</B>: tipos</B></FONT>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+<BR><BR>
+Existem dois tipos de campos:
+<UL>
+<LI>com um único valor (escalar, vetorial, imagem, ...), iniciados por <B>SF</B> (Single-valued Field)</LI>
+<LI>com múltiplos valores, iniciados por <B>MF</B> (Multi-valued Field), separados por vírgulas
+ou espaços em branco, e listados entre <B>[ ]</B> (opcionais se o campo contiver apenas um valor)</LI> 
+</UL>
+<BR> 
+Os mesmos tipos usados para campos são usados para eventos:
+<BR><BR>
+<UL>
+<LI><B>SFBool</B>   - boolean, exs: <B>TRUE</B> ou <B>FALSE</B>
+<LI><B>SFColor, MFColor</B>   - cor (r g b), exs:  <B>0 1 0 </B> ou  <B>[ 1. 1. 0., 0. 0. 1.] </B> 
+<LI><B>SFFloat, MFFloat</B>   - floating point, exs:  <B>3.1415</B> ou <B>[1.2 3.5 4.7]</B>
+<LI><B>SFImage</B> -   imagem 2-D não comprimida, ex:<B> 1 2 1 0xFF 0x00 </B> para uma imagem com um 
+pixel de largura por dois de altura e um de profundidade, com um pixel branco (inferior) e um preto (superior)
+<LI><B>SFInt32, MFInt32</B> -   inteiro, ex: <B>14</B> ou <B>[17, -0xE20, -518]</B>
+<LI><B>SFNode, MFNode</B> -   node, ex:<B>Box { }</B> ou <B>[Group {...}, DirectionalLight {...}]</B>
+<LI><B>SFRotation, MFRotation</B> -   rotação (x y z radianos), ex: <B>0. 1. 0. 3.14</B>
+<LI><B>SFString, MFString</B> -   string, ex: <B>"Vista Panoramica"</B>
+<LI><B>SFTime, MFTime</B> -   tempo, em segundos, a partir de 1 de Jan de 1970, ex: <B>50000</B>
+<LI><B>SFVec2f, MFVec2f</B> -   vetor 2D, ex: <B>0 1</B>, ou <B>[3 2, 5 3]</B>
+<LI><B>SFVec3f, MFVec3f</B> -   vetor 3D, ex: <B>0 0 1</B>
+</UL>
+
+</FONT>
+</BODY>
+</HTML>

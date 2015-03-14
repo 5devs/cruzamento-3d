@@ -1,0 +1,13 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+#Beatriz Castier, Luciano Pereira dos Reis, Marcelo Cohen
+#
+#Exemplo de Textura
+#
+Shape {
+	appearance Appearance {
+		material Material { }
+		texture ImageTexture { url "../texture.gif "}
+	}
+	geometry Box { }
+}

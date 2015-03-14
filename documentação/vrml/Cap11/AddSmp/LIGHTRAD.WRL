@@ -1,0 +1,161 @@
+#VRML V2.0 utf8
+
+PROTO RADIOBUTTON
+[
+eventIn SFBool Button_releaseP
+eventOut SFBool Button_isActiveP
+eventOut SFBool Button_isnot_ActiveP
+]
+{
+Group {
+	children [
+		DEF radioButton Transform {
+			center 0 -0.1 0
+			children [
+				Shape {
+					appearance DEF buttonAppearance Appearance {
+						material Material { 
+							diffuseColor 1 1 0
+						}
+					}
+					geometry Cylinder { 
+						height .2 
+						radius .1 
+					}
+				}
+				DEF TCHS TouchSensor { }
+			]
+		}
+	]
+}
+
+DEF RADIOactive Script {
+	eventIn SFBool Button_was_pressed
+	eventOut SFBool Button_isActiveS IS Button_isActiveP
+	eventOut SFVec3f shrinkButton
+	eventOut SFNode activeMaterial
+	field SFNode onMaterial Material { emissiveColor 1 0 0 diffuseColor 0 0 0 }
+
+	url "vrmlscript:
+		function Button_was_pressed(pressed) {
+			if (pressed) {
+				shrinkButton[0] = 1;
+				shrinkButton[1] = 0.5;
+				shrinkButton[2] = 1;
+				activeMaterial = onMaterial;
+				Button_isActiveS = TRUE;
+			}
+		}
+	"
+}
+
+DEF RELEASE Script {
+	eventIn SFBool Button_releaseS IS Button_releaseP
+	eventOut SFBool Button_isnot_ActiveS IS Button_isnot_ActiveP
+	eventOut SFVec3f shrinkButton
+	eventOut SFNode passiveMaterial
+	field SFNode offMaterial Material { diffuseColor 1 1 0 emissiveColor 0 0 0 }
+	
+	url "vrmlscript:
+		function Button_releaseS(released) {
+			if (released) {
+				shrinkButton[0] = 1;
+				shrinkButton[1] = 1;
+				shrinkButton[2] = 1;
+				passiveMaterial = offMaterial;
+				Button_isnot_ActiveS = FALSE;
+			}
+		}
+	"
+}
+
+ROUTE TCHS.isActive TO RADIOactive.Button_was_pressed
+ROUTE RADIOactive.activeMaterial TO buttonAppearance.set_material
+ROUTE RADIOactive.shrinkButton TO radioButton.set_scale 
+ROUTE RELEASE.passiveMaterial TO buttonAppearance.set_material
+ROUTE RELEASE.shrinkButton TO radioButton.set_scale
+
+} # end of proto radiobutton
+
+NavigationInfo {
+	headlight 	FALSE
+	type	"FLY"
+}
+
+Background {
+	skyColor [0 0 0, ]
+  	groundColor [0.1 0.1 0.1, ]
+}
+
+DEF only Viewpoint {
+	orientation 1 0 0 -0.2
+	position 0 1 2
+	description "only"
+}
+
+DirectionalLight {
+	intensity 0.5
+	direction 0 -1 -1
+}
+		
+Transform {
+	translation -1 0 0
+	children [
+		DEF left RADIOBUTTON {}
+	]	
+}
+Transform {
+	children [
+		DEF middle RADIOBUTTON {}
+	]
+}
+Transform {
+	translation 1 0 0
+	children [
+		DEF right RADIOBUTTON {}
+	]
+}
+
+DEF lamps Group {
+	children [
+		Transform {
+			translation -1 1 -1
+			children [
+				DEF leftL SpotLight { location 0 0 1 direction 0 0 -1 color 1 0 0 on FALSE }
+				Shape { appearance Appearance { material Material { diffuseColor 0.2 0 0 } }
+				geometry Box { size 0.3 0.3 0.3 } }
+			]
+		}
+		Transform {
+			translation 0 1 -1
+			children [
+				DEF middleL SpotLight { location 0 0 1 direction 0 0 -1 color 0 1 0 on FALSE }
+				Shape { appearance Appearance { material Material { diffuseColor 0 0.2 0 } }
+				geometry Sphere { radius 0.2 } }
+			]
+		}
+		Transform {
+			translation 1 1 -1
+			children [
+				DEF rightL SpotLight { location 0 0 1 direction 0 0 -1 color 0 0 1 on FALSE }
+				Shape { appearance Appearance { material Material { diffuseColor 0 0 0.2 } }
+				geometry Cone { bottomRadius 0.2 height 0.4 } }
+			]
+		}
+	]
+}
+	
+ROUTE left.Button_isActiveP TO middle.Button_releaseP
+ROUTE left.Button_isActiveP TO right.Button_releaseP
+ROUTE middle.Button_isActiveP TO left.Button_releaseP
+ROUTE middle.Button_isActiveP TO right.Button_releaseP
+ROUTE right.Button_isActiveP TO left.Button_releaseP
+ROUTE right.Button_isActiveP TO middle.Button_releaseP
+
+ROUTE left.Button_isActiveP TO leftL.on
+ROUTE middle.Button_isActiveP TO middleL.on
+ROUTE right.Button_isActiveP TO rightL.on
+
+ROUTE middle.Button_isnot_ActiveP TO middleL.on
+ROUTE right.Button_isnot_ActiveP TO rightL.on
+ROUTE left.Button_isnot_ActiveP TO leftL.on

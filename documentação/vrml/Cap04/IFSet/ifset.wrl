@@ -1,0 +1,50 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+#Beatriz Castier, Luciano Pereira dos Reis, Marcelo Cohen
+#
+#Exemplo de IndexedFaceSet
+#Construcao de um cubo com faces de diferentes cores.
+
+#Eixos
+Inline { url "../coord.wrl" }
+
+# Desenho do cubo
+Shape {
+   appearance Appearance {
+      material Material {  }
+   }
+   geometry IndexedFaceSet {
+      coord Coordinate {
+         point [
+            # Coordenadas do cubo
+             1.0  1.0  1.0,  1.0 -1.0  1.0,
+            -1.0 -1.0  1.0, -1.0  1.0  1.0,
+             1.0  1.0 -1.0,  1.0 -1.0 -1.0, 
+            -1.0 -1.0 -1.0, -1.0  1.0 -1.0
+         ]
+      }
+      coordIndex [
+         # Faces do cubo
+         #Face vermelhas (perpendiculares ao eixo x)
+         2, 3, 7, 6, -1,
+         0, 1, 5, 4, -1, 
+         #Faces verdes (perpendiculares ao eixo y)
+         0, 4, 7, 3, -1,
+         1, 2, 6, 5, -1,
+         #Faces azuis (perpendiculares ao eixo z)
+         0, 3, 2, 1, -1, 
+         4, 5, 6, 7, -1,
+      ]
+      color Color {
+         color [
+            1.0 0.0 0.0, 0.0 1.0 0.0, 0.0 0.0 1.0
+         ]
+      }
+      colorPerVertex   FALSE
+      colorIndex  [ 
+         0, 0, 1, 1, 2, 2, -1 
+      ]
+   }
+}
+
+

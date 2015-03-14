@@ -1,0 +1,51 @@
+#VRML V2.0 utf8
+Group {
+	children [
+		# Fonte sonora
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 	0.0 0.0 0.0
+					emissiveColor  0.6 0.4 0.0	
+				}
+			}
+			geometry Sphere { radius 0.25 }
+		},
+		# Elispoide interno
+		Transform {
+			translation 2.0 0.0 0.0
+			scale 3.0 1.0 2.0
+			children 
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 	0.0 0.0 0.0
+							emissiveColor  0.6 0.6 0.0
+						}
+					}
+					geometry Cylinder {
+						radius 1.0
+						height 0.05
+					}			
+				}
+		},
+		# Elipsoide externo
+		Transform {
+			translation 4.0 0.0 0.0
+			scale 6.0 1.0 4.0
+			children
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 	0.0 0.0 0.0
+							emissiveColor  0.4 0.4 0.0
+						}
+					}
+					geometry Cylinder {
+						radius 1.0
+						height 0.001
+					}
+				}
+		}
+	]
+}

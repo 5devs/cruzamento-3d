@@ -1,0 +1,31 @@
+#VRML V2.0 utf8
+#  A Dinette (dinette.wrl)
+#        by David R. Nadeau
+#
+#  Este exemplo mostra o uso do no Inline.
+#  Dois componentes sao "inlined": uma mesa e uma cadeira.
+#  A cadeira entao e instanciada tres vezes ao redor da mesa. 
+#
+#  Mesa
+Inline { url "table.wrl" }
+
+#  Cadeiras
+Transform {
+    translation 0.95 0.0 0.0
+    children DEF Chair Inline { url "chair.wrl" }
+}
+Transform {
+    translation -0.95 0.0 0.0
+    rotation 0.0 1.0 0.0 3.14
+    children USE Chair
+}
+Transform {
+    translation 0.0 0.0 0.95
+    rotation 0.0 1.0 0.0 -1.57
+    children USE Chair
+}
+Transform {
+    translation 0.0 0.0 -0.95
+    rotation 0.0 1.0 0.0 1.57
+    children USE Chair
+}

@@ -1,0 +1,1557 @@
+#VRML V2.0 utf8 CosmoWorlds V1.0
+
+Group {
+  children	[
+    NavigationInfo {
+      type	"EXAMINE"
+    }
+    Viewpoint {
+      position	0 7 70
+      description	"HOME"
+    }
+    Background {
+      skyColor	0.3 0.3 1
+    }
+    Transform {
+      children	[
+	Inline {
+	  url	"teil1.wrl"
+	  bboxCenter	-48.9043 74.11 0
+	  bboxSize	250 148.562 190
+	}
+	DEF TRANSFORM2 Transform {
+	  children	[
+	    Inline {
+	      url	"teil2.wrl"
+	      bboxCenter	1.90035 191.152 -0.0667992
+	      bboxSize	111.45 83.282 168.598
+	    }
+	    Inline {
+	      url	"teil3.wrl"
+	      bboxCenter	-74.9805 300.489 -1.2095
+	      bboxSize	283.961 134 237.109
+	    }
+	    DEF TRANSFORM4 Transform {
+	      children	[
+		Inline {
+		  url	"teil4.wrl"
+		  bboxCenter	125 0.488501 0.438101
+		  bboxSize	360 104.617 112.277
+		}
+		DEF TRANSFORM5 Transform {
+		  children	[
+		    Inline {
+		      url	"teil5.wrl"
+		      bboxCenter	80 0.488501 1.178
+		      bboxSize	250 85.595 71.8512
+		    }
+		    DEF TRANSFORM6 Transform {
+		      children	[
+			Inline {
+			  url	"teil6.wrl"
+			  bboxCenter	20.9975 0.488998 1.89735
+			  bboxSize	101.995 79.57 79.9997
+			}
+			DEF TRANSFORM7 Transform {
+			  children	[
+			    Inline {
+			      url	"teil7.wrl"
+			      bboxCenter	109.163 0.489 1.3581
+			      bboxSize	68.999 60 87
+			    }
+			    Inline {
+			      url	"teil8.wrl"
+			      bboxCenter	164.726 0.489005 -32.3333
+			      bboxSize	38 20 20
+			    }
+			    Inline {
+			      url	"teil9.wrl"
+			      bboxCenter	164.726 0.489005 34.1769
+			      bboxSize	38 20 20
+			    }
+			  ]
+			  rotation	0 0 1  0
+			}
+		      ]
+		      translation	160 0 0
+		      rotation	0 0 1  0
+		    }
+		  ]
+		  translation	250 0 0
+		  rotation	0 0 1  0
+		}
+	      ]
+	      translation	0 300 0
+	      rotation	0 0 1  0
+	    }
+	  ]
+	  rotation	0 0 1  0
+	}
+      ]
+      scale	0.05 0.05 0.05
+    }
+    Group {
+      children	[
+	DEF prox ProximitySensor {
+	  center	0 0 0
+	  size	100 100 160
+	}
+	DEF xform Transform {
+	  children	[
+	    Transform {
+	      children	[
+		DEF START TouchSensor {
+		}
+		Transform {
+		  children	DEF BUTTON Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	0 1 0
+		      }
+
+		    }
+
+		    geometry	Text {
+		      string	"Animate"
+		      fontStyle	FontStyle {
+			size	5
+			justify	"MIDDLE"
+		      }
+
+		    }
+
+		  }
+
+		  translation	-0.37 -0.3225 -1
+		  scale	0.01 0.01 0.01
+		}
+		Transform {
+		  children	Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	0.2 0.2 0.2
+		      }
+
+		    }
+
+		    geometry	Box {
+		      size	25 7 0.1
+		    }
+
+		  }
+
+		  translation	-0.41 -0.335 -1.1
+		  scale	0.01 0.01 0.01
+		}
+	      ]
+	    }
+	    Transform {
+	      children	[
+		DEF RESET TouchSensor {
+		}
+		Transform {
+		  children Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	1 1 0
+		      }
+
+		    }
+
+		    geometry	Text {
+		      string	"RESET"
+		      fontStyle	FontStyle {
+			size	5
+			justify	"MIDDLE"
+		      }
+
+		    }
+
+		  }
+
+		  translation	-0.37 -0.39 -1
+		  scale	0.01 0.01 0.01
+		}
+		Transform {
+		  children	Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	0.2 0.2 0.2
+		      }
+
+		    }
+
+		    geometry	Box {
+		      size	25 7 0.1
+		    }
+
+		  }
+
+		  translation	-0.41 -0.41 -1.1
+		  scale	0.01 0.01 0.01
+		}
+	      ]
+	    }
+	    Transform {
+	      children	[
+		Group {
+		  children	[
+		    DEF TOUCH2LEFT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	0.3412 0.3412 0.3412
+			    shininess	0.2
+			  }
+			}
+			geometry	Box {
+			  size	0.1025 0.0525 0.001
+			}
+		      }
+		      translation	-0.1525 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	-0.1525 -0.305 -1
+		    }
+		  ]
+		}
+		Group {
+		  children	[
+		    DEF TOUCH2RIGHT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	0.3412 0.3412 0.3412
+			    shininess	0.2
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.0525 0.001
+			}
+
+		      }
+
+		      translation	-0.0375 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	-0.0375 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.01 0.04 0.001
+			}
+		      }
+		      translation	-0.0375 -0.305 -1
+		    }
+		  ]
+		}
+		Transform {
+		  children	Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	0.2 0.2 0.2
+		      }
+
+		    }
+
+		    geometry	Box {
+		      size	25 7 0.1
+		    }
+
+		  }
+
+		  translation	-0.105 -0.335 -1.1
+		  scale	0.01 0.01 0.01
+		}
+	      ]
+	    }
+	    Transform {
+	      children	[
+		Group {
+		  children	[
+		    DEF TOUCH4LEFT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 1 0.3
+			    shininess	0.75
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.0525 0.001
+			}
+
+		      }
+
+		      translation	0.08 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	0.08 -0.305 -1
+		    }
+		  ]
+		}
+		Group {
+		  children	[
+		    DEF TOUCH4RIGHT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 1 0.3
+			    shininess	0.75
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.0525 0.001
+			}
+
+		      }
+
+		      translation	0.1925 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	0.1925 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.01 0.04 0.001
+			}
+		      }
+		      translation	0.1925 -0.305 -1
+		    }
+		  ]
+		}
+		Transform {
+		  children	Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	0.2 0.2 0.2
+		      }
+
+		    }
+
+		    geometry	Box {
+		      size	25 7 0.1
+		    }
+
+		  }
+
+		  translation	0.15 -0.335 -1.1
+		  scale	0.01 0.01 0.01
+		}
+	      ]
+	    }
+	    Transform {
+	      children	[
+		Group {
+		  children	[
+		    DEF TOUCH5LEFT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0.3 1
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.0525 0.001
+			}
+
+		      }
+
+		      translation	0.31125 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	0.31125 -0.305 -1
+		    }
+		  ]
+		}
+		Group {
+		  children	[
+		    DEF TOUCH5RIGHT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0.3 1
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.0525 0.001
+			}
+
+		      }
+
+		      translation	0.425 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	0.425 -0.305 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.01 0.04 0.001
+			}
+		      }
+		      translation	0.425 -0.305 -1
+		    }
+		  ]
+		}
+		Transform {
+		  children	Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	0.2 0.2 0.2
+		      }
+
+		    }
+
+		    geometry	Box {
+		      size	25 7 0.1
+		    }
+
+		  }
+
+		  translation	0.405 -0.335 -1.1
+		  scale	0.01 0.01 0.01
+		}
+	      ]
+	    }
+	    Transform {
+	      children	[
+		Group {
+		  children	[
+		    DEF TOUCH6LEFT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	0.3 1 1
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.05 0.001
+			}
+
+		      }
+
+		      translation	-0.1525 -0.3725 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	-0.1525 -0.3725 -1
+		    }
+		  ]
+		}
+		Group {
+		  children	[
+		    DEF TOUCH6RIGHT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	0.3 1 1
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.05 0.001
+			}
+
+		      }
+
+		      translation	-0.0375 -0.3725 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	-0.0375 -0.3725 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.01 0.04 0.001
+			}
+		      }
+		      translation	-0.0375 -0.3725 -1
+		    }
+		  ]
+		}
+		Transform {
+		  children	Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	0.2 0.2 0.2
+		      }
+
+		    }
+
+		    geometry	Box {
+		      size	25 7 0.1
+		    }
+
+		  }
+
+		  translation	-0.105 -0.41 -1.1
+		  scale	0.01 0.01 0.01
+		}
+	      ]
+	    }
+	    Transform {
+	      children	[
+		Group {
+		  children	[
+		    DEF TOUCH7LEFT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	0.3412 0.3412 0.3412
+			    shininess	0.2
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.05 0.001
+			}
+
+		      }
+
+		      translation	0.08 -0.3725 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	0.08 -0.3725 -1
+		    }
+		  ]
+		}
+		Group {
+		  children	[
+		    DEF TOUCH7RIGHT TouchSensor {
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	0.3412 0.3412 0.3412
+			    shininess	0.2
+			  }
+
+			}
+
+			geometry	Box {
+			  size	0.1025 0.05 0.001
+			}
+
+		      }
+
+		      translation	0.1925 -0.3725 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.04 0.01 0.001
+			}
+		      }
+		      translation	0.1925 -0.3725 -1
+		    }
+		    Transform {
+		      children	Shape {
+			appearance	Appearance {
+			  material	Material {
+			    diffuseColor	1 0 0
+			  }
+			}
+			geometry	Box {
+			  size	0.01 0.04 0.001
+			}
+		      }
+		      translation	0.1925 -0.3725 -1
+		    }
+		  ]
+		}
+		Transform {
+		  children	Shape {
+		    appearance	Appearance {
+		      material	Material {
+			diffuseColor	0.2 0.2 0.2
+		      }
+
+		    }
+
+		    geometry	Box {
+		      size	25 7 0.1
+		    }
+
+		  }
+
+		  translation	0.15 -0.41 -1.1
+		  scale	0.01 0.01 0.01
+		}
+	      ]
+	    }
+	Anchor {
+	  children [
+	    Transform {
+	      children	Shape {
+		appearance	Appearance {
+		  material	Material {
+		    ambientIntensity	0.2
+		    diffuseColor	1 0.318894 0
+		    shininess	0.0864865
+		    transparency	0
+		  }
+
+		}
+
+		geometry	Text {
+		  string	"MITSUBISHI MOVEMASTER EX"
+		  fontStyle	FontStyle {
+		    size	5
+		    justify	"MIDDLE"
+		  }
+
+		}
+
+	      }
+
+	      translation	0 -0.25 -1
+	      scale	0.01 0.01 0.01
+	    }
+	  ]
+	  url [
+	    "http://www.rosl.com/models.htm"
+	  ]
+	}
+	    DEF Light1 DirectionalLight {
+	      direction	0 0 -1
+	    }
+	  ]
+	  translation	0 0 0
+	  rotation	0 0 1  0
+	}
+      ]
+    }
+    DEF TIMER TimeSensor {
+      cycleInterval	3
+      enabled	FALSE
+      loop	TRUE
+      startTime	1
+    }
+    DEF INTERPOLATOR OrientationInterpolator {
+      key	[ 0, 0.05, 0.1, 0.15,
+	        0.2, 0.25, 0.3, 0.35,
+	        0.4, 0.45, 0.5, 0.55,
+	        0.6, 0.65, 0.7, 0.75,
+	        0.8, 0.85, 0.9, 0.95,
+	        1 ]
+      keyValue	[ 0 0 1  0,
+	        0 1 0  0.314159,
+	        0 1 0  0.628318,
+	        0 1 0  0.942478,
+	        0 1 0  1.25664,
+	        0 1 0  1.5708,
+	        0 1 0  1.88496,
+	        0 1 0  2.19911,
+	        0 1 0  2.51327,
+	        0 1 0  2.82743,
+	        0 1 0  3.14159,
+	        0 1 0  3.45575,
+	        0 1 0  3.76991,
+	        0 1 0  4.08407,
+	        0 1 0  4.39823,
+	        0 1 0  4.71239,
+	        0 1 0  5.02655,
+	        0 1 0  5.34071,
+	        0 1 0  5.65487,
+	        0 1 0  5.96903,
+	        0 0 1  0 ]
+    }
+    DEF INTERPOLATOR4 OrientationInterpolator {
+      key	[ 0, 0.05, 0.1, 0.15,
+	        0.2, 0.25, 0.3, 0.35,
+	        0.4, 0.45, 0.5, 0.55,
+	        0.6, 0.65, 0.7, 0.75,
+	        0.8, 0.85, 0.9, 0.95,
+	        1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  0.15708,
+	        0 0 1  0.314159,
+	        0 0 1  0.471239,
+	        0 0 1  0.628318,
+	        0 0 1  0.785398,
+	        0 0 1  0.942478,
+	        0 0 1  1.09956,
+	        0 0 1  1.25664,
+	        0 0 1  1.41372,
+	        0 0 1  1.5708,
+	        0 0 1  1.41372,
+	        0 0 1  1.25664,
+	        0 0 1  1.09956,
+	        0 0 1  0.942478,
+	        0 0 1  0.785398,
+	        0 0 1  0.628318,
+	        0 0 1  0.471239,
+	        0 0 1  0.314159,
+	        0 0 1  0.15708,
+	        0 0 1  0 ]
+    }
+    DEF INTERPOLATOR5 OrientationInterpolator {
+      key	[ 0, 0.05, 0.1, 0.15,
+	        0.2, 0.25, 0.3, 0.35,
+	        0.4, 0.45, 0.5, 0.55,
+	        0.6, 0.65, 0.7, 0.75,
+	        0.8, 0.85, 0.9, 0.95,
+	        1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 -1  0.15708,
+	        0 0 -1  0.314159,
+	        0 0 -1  0.471239,
+	        0 0 -1  0.628318,
+	        0 0 -1  0.785398,
+	        0 0 -1  0.942478,
+	        0 0 -1  1.09956,
+	        0 0 -1  1.25664,
+	        0 0 -1  1.41372,
+	        0 0 -1  1.5708,
+	        0 0 -1  1.41372,
+	        0 0 -1  1.25664,
+	        0 0 -1  1.09956,
+	        0 0 -1  0.942478,
+	        0 0 -1  0.785398,
+	        0 0 -1  0.628318,
+	        0 0 -1  0.471239,
+	        0 0 -1  0.314159,
+	        0 0 -1  0.15708,
+	        0 0 1  0 ]
+    }
+    DEF INTERPOLATOR7 OrientationInterpolator {
+      key	[ 0, 0.05, 0.1, 0.15,
+	        0.2, 0.25, 0.3, 0.35,
+	        0.4, 0.45, 0.5, 0.55,
+	        0.6, 0.65, 0.7, 0.75,
+	        0.8, 0.85, 0.9, 0.95,
+	        1 ]
+      keyValue	[ 0 0 1  0,
+	        1 0 0  0.314159,
+	        1 0 0  0.628318,
+	        1 0 0  0.942478,
+	        1 0 0  1.25664,
+	        1 0 0  1.5708,
+	        1 0 0  1.88496,
+	        1 0 0  2.19911,
+	        1 0 0  2.51327,
+	        1 0 0  2.82743,
+	        1 0 0  3.14159,
+	        1 0 0  3.45575,
+	        1 0 0  3.76991,
+	        1 0 0  4.08407,
+	        1 0 0  4.39823,
+	        1 0 0  4.71239,
+	        1 0 0  5.02655,
+	        1 0 0  5.34071,
+	        1 0 0  5.65487,
+	        1 0 0  5.96903,
+	        0 0 1  0 ]
+    }
+#####################################
+    DEF SAVE2 Transform {
+      children	[
+      ]
+    }
+    DEF TIMER2RIGHT TimeSensor {
+      cycleInterval	10
+    }
+    DEF TIMER2LEFT TimeSensor {
+      cycleInterval	10
+    }
+    DEF INTERPOLATOR2RIGHT OrientationInterpolator {
+      key	[ 0, 0.5, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  3.1415927,
+		0 0 1  0]
+    }
+    DEF INTERPOLATOR2LEFT OrientationInterpolator {
+      key	[ 0, 0.5, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  3.1415927,
+		0 0 1  0]
+    }
+    DEF Start2RIGHT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER2RIGHT
+      field	SFNode	transform USE TRANSFORM2
+      field	SFNode	original USE SAVE2
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF Start2LEFT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER2LEFT
+      field	SFNode	transform USE TRANSFORM2
+      field	SFNode	original USE SAVE2
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil2Right Script {
+      eventIn    SFRotation      newValue
+      field      SFNode      	transform USE TRANSFORM2
+      field	 SFNode		original USE SAVE2
+      field	 SFNode		timer USE TIMER2RIGHT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = value.angle + rot.angle;
+	  if (angle > 6.2831853) angle -= 6.2831853;
+	  rot = new SFRotation(0, 1, 0, angle);
+	  transform.rotation = rot;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil2Left Script {
+      eventIn    SFRotation      newValue
+      eventOut   SFRotation      oldValue
+      field      SFNode      	transform USE TRANSFORM2
+      field	 SFNode		original USE SAVE2
+      field	 SFNode		timer USE TIMER2LEFT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = rot.angle - value.angle;
+	  if (angle < 0) angle += 6.2831853;
+	  rot = new SFRotation(0, 1, 0, angle);
+	  transform.rotation = rot;
+	}
+      "
+      directOutput	TRUE
+    }
+#####################################
+    DEF SAVE4 Transform {
+      children	[
+      ]
+    }
+    DEF TIMER4RIGHT TimeSensor {
+      cycleInterval	10
+    }
+    DEF INTERPOLATOR4RIGHT OrientationInterpolator {
+      key	[ 0, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  1.5707]
+    }
+    DEF TIMER4LEFT TimeSensor {
+      cycleInterval	10
+    }
+    DEF INTERPOLATOR4LEFT OrientationInterpolator {
+      key	[ 0, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  1.5707]
+    }
+    DEF Start4RIGHT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER4RIGHT
+      field	SFNode	transform USE TRANSFORM4
+      field	SFNode	original USE SAVE4
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      if (rot.angle < 1.5707)
+		timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil4Right Script {
+      eventIn    SFRotation      newValue
+      field      SFNode      	transform USE TRANSFORM4
+      field	 SFNode		original USE SAVE4
+      field	 SFNode		timer USE TIMER4RIGHT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = value.angle + rot.angle;
+	  if (angle > 1.5707) {
+	    rot.angle = 1.5707;
+	    timer.stopTime = time;
+	  }
+	  rot = new SFRotation(0, 0, 1, angle);
+	  transform.rotation = rot;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF Start4LEFT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER4LEFT
+      field	SFNode	transform USE TRANSFORM4
+      field	SFNode	original USE SAVE4
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      timer.startTime = time;
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil4Left Script {
+      eventIn    SFRotation      newValue
+      eventOut   SFRotation      oldValue
+      field      SFNode      	transform USE TRANSFORM4
+      field	 SFNode		original USE SAVE4
+      field	 SFNode		timer USE TIMER4RIGHT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = rot.angle - value.angle;
+	  if (angle < 0) {
+	    angle = 0;
+	    timer.stopTime = time;
+	  }
+	  rot = new SFRotation(0, 0, 1, angle);
+	  oldValue = rot;
+	  transform.rotation = rot;
+	}
+      "
+      directOutput	TRUE
+    }
+#################################################################
+    DEF SAVE5 Transform {
+      children	[
+      ]
+    }
+    DEF TIMER5RIGHT TimeSensor {
+      cycleInterval	10
+    }
+    DEF TIMER5LEFT TimeSensor {
+      cycleInterval	10
+    }
+    DEF INTERPOLATOR5RIGHT OrientationInterpolator {
+      key	[ 0, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 -1  1.5707]
+    }
+    DEF INTERPOLATOR5LEFT OrientationInterpolator {
+      key	[ 0, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  1.5707]
+    }
+    DEF Start5RIGHT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER5RIGHT
+      field	SFNode	transform USE TRANSFORM5
+      field	SFNode	original USE SAVE5
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      if (rot.angle > 0)
+		timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF Start5LEFT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER5LEFT
+      field	SFNode	transform USE TRANSFORM5
+      field	SFNode	original USE SAVE5
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      if (rot.angle < 1.5707)
+		timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil5Right Script {
+      eventIn    SFRotation      newValue
+      eventOut   SFFloat	oldValue
+      field      SFNode      	transform USE TRANSFORM5
+      field	 SFNode		original USE SAVE5
+      field	 SFNode		timer USE TIMER5RIGHT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = rot.angle - value.angle;
+	  if (angle < 0) angle = 0;
+	  rot = new SFRotation(0, 0, -1, angle);
+	  transform.rotation = rot;
+	  oldvalue = angle;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil5Left Script {
+      eventIn    SFRotation      newValue
+      field      SFNode      	transform USE TRANSFORM5
+      field	 SFNode		original USE SAVE5
+      field	 SFNode		timer USE TIMER5LEFT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = value.angle + rot.angle;
+	  if (angle > 1.5707) angle = 1.5707;
+	  rot = new SFRotation(0, 0, -1, angle);
+	  transform.rotation = rot;
+	}
+      "
+      directOutput	TRUE
+    }
+#################################################################
+    DEF SAVE6 Transform {
+      children	[
+      ]
+    }
+    DEF TIMER6RIGHT TimeSensor {
+      cycleInterval	10
+    }
+    DEF TIMER6LEFT TimeSensor {
+      cycleInterval	10
+    }
+    DEF INTERPOLATOR6RIGHT OrientationInterpolator {
+      key	[ 0, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 -1  1.5707]
+    }
+    DEF INTERPOLATOR6LEFT OrientationInterpolator {
+      key	[ 0, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  1.5707]
+    }
+    DEF Start6RIGHT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER6RIGHT
+      field	SFNode	transform USE TRANSFORM6
+      field	SFNode	original USE SAVE6
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      if (rot.angle > 0)
+		timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF Start6LEFT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER6LEFT
+      field	SFNode	transform USE TRANSFORM6
+      field	SFNode	original USE SAVE6
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      if (rot.angle < 1.5707)
+		timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil6Left Script {
+      eventIn    SFRotation      newValue
+      field      SFNode      	transform USE TRANSFORM6
+      field	 SFNode		original USE SAVE6
+      field	 SFNode		timer USE TIMER6LEFT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = value.angle + rot.angle;
+	  if (angle > 1.5707) angle = 1.5707;
+	  rot = new SFRotation(0, 0, -1, angle);
+	  transform.rotation = rot;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil6Right Script {
+      eventIn    SFRotation      newValue
+      field      SFNode      	transform USE TRANSFORM6
+      field	 SFNode		original USE SAVE6
+      field	 SFNode		timer USE TIMER6RIGHT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = rot.angle - value.angle;
+	  if (angle < 0) angle = 0;
+	  rot = new SFRotation(0, 0, -1, angle);
+	  transform.rotation = rot;
+	  oldvalue = angle;
+	}
+      "
+      directOutput	TRUE
+    }
+#################################################################
+    DEF SAVE7 Transform {
+      children	[
+      ]
+    }
+    DEF TIMER7RIGHT TimeSensor {
+      cycleInterval	10
+    }
+    DEF TIMER7LEFT TimeSensor {
+      cycleInterval	10
+    }
+    DEF INTERPOLATOR7RIGHT OrientationInterpolator {
+      key	[ 0, 0.5, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  3.1415927,
+		0 0 1  0]
+    }
+    DEF INTERPOLATOR7LEFT OrientationInterpolator {
+      key	[ 0, 0.5, 1 ]
+      keyValue	[ 0 0 1  0,
+	        0 0 1  3.1415927,
+		0 0 1  0]
+    }
+    DEF Start7RIGHT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER7RIGHT
+      field	SFNode	transform USE TRANSFORM7
+      field	SFNode	original USE SAVE7
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF Start7LEFT Script {
+      eventIn	SFBool      activated
+      field	SFNode	timer USE TIMER7LEFT
+      field	SFNode	transform USE TRANSFORM7
+      field	SFNode	original USE SAVE7
+      field	SFRotation	rot	0 0 1	0
+      url	"vrmlscript:
+	function activated(value, time) {
+	  if (value)
+	    {
+	      rot = transform.rotation;
+	      original.rotation = rot;
+	      timer.startTime = time;
+	    }
+	  else
+	    timer.stopTime = time;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil7Right Script {
+      eventIn    SFRotation      newValue
+      field      SFNode      	transform USE TRANSFORM7
+      field	 SFNode		original USE SAVE7
+      field	 SFNode		timer USE TIMER7RIGHT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = value.angle + rot.angle;
+	  if (angle > 6.2831853) angle -= 6.2831853;
+	  rot = new SFRotation(1, 0, 0, angle);
+	  transform.rotation = rot;
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF RotateTeil7Left Script {
+      eventIn    SFRotation      newValue
+      field      SFNode      	transform USE TRANSFORM7
+      field	 SFNode		original USE SAVE7
+      field	 SFNode		timer USE TIMER7LEFT
+      field	 SFRotation	rot	0 0 1  0
+      field	 SFFloat	angle	0
+      url	"vrmlscript:
+	function newValue(value, time) {
+	  rot = original.rotation;
+	  angle = rot.angle - value.angle;
+	  if (angle < 0) angle += 6.2831853;
+	  rot = new SFRotation(1, 0, 0, angle);
+	  transform.rotation = rot;
+	}
+      "
+      directOutput	TRUE
+    }
+#################################################################
+    DEF StartScript Script {
+      eventOut      SFBool      activ
+      eventIn      SFBool      activated
+      field      SFNode      button	USE BUTTON
+
+      field      SFNode      buttonMaterial	NULL
+
+      field      SFNode      buttonText	NULL
+
+      field      SFColor      color	0 0 1
+      field      MFString      text1	"Animate"
+      field      MFString      text2	"STOP"
+      url	"vrmlscript:
+	function activated(value) {
+	  buttonMaterial = button.appearance.material;
+	  buttonText = button.geometry;
+	  if (value) 
+	    if (activ)
+	      {
+	      	activ = FALSE;
+		color[0] = 0;
+		color[1] = 1;
+		color[2] = 0;
+		buttonMaterial.diffuseColor = color;
+		buttonText.string = text1;
+	      }
+	    else
+	      {
+	        activ = TRUE;
+		color[0] = 1;
+		color[1] = 0;
+		color[2] = 0;
+		buttonMaterial.diffuseColor = color;
+		buttonText.string = text2;
+	      }
+	}
+      "
+      directOutput	TRUE
+    }
+    DEF ResetScript Script {
+      eventIn      SFBool      activated
+      field	SFNode	transform2 USE TRANSFORM2
+      field	SFNode	transform4 USE TRANSFORM4
+      field	SFNode	transform5 USE TRANSFORM5
+      field	SFNode	transform6 USE TRANSFORM6
+      field	SFNode	transform7 USE TRANSFORM7
+      field	SFRotation	rotate	0 0 1  0
+      url	"vrmlscript:
+	function activated(value) {
+	  rotate = transform2.rotation;
+	  rotate.x = 0;
+	  rotate.y = 0;
+	  rotate.z = 1;
+	  rotate.angle = 0;
+	  transform2.rotation = rotate;
+	  rotate = transform4.rotation;
+	  rotate.x = 0;
+	  rotate.y = 0;
+	  rotate.z = 1;
+	  rotate.angle = 0;
+	  transform4.rotation = rotate;
+	  rotate = transform5.rotation;
+	  rotate.x = 0;
+	  rotate.y = 0;
+	  rotate.z = 1;
+	  rotate.angle = 0;
+	  transform5.rotation = rotate;
+	  rotate = transform6.rotation;
+	  rotate.x = 0;
+	  rotate.y = 0;
+	  rotate.z = 1;
+	  rotate.angle = 0;
+	  transform6.rotation = rotate;
+	  rotate = transform7.rotation;
+	  rotate.x = 0;
+	  rotate.y = 0;
+	  rotate.z = 1;
+	  rotate.angle = 0;
+	  transform7.rotation = rotate;
+	}
+      "
+      directOutput	TRUE
+    }
+#    DEF DebugScript1 CoRouteDebugger {}
+#    DEF DebugScript2 CoRouteDebugger {}
+  ]
+}
+# -----------------------
+# bind menu to the camera
+# -----------------------
+ROUTE prox.position_changed TO prox.set_center
+ROUTE prox.position_changed TO xform.set_translation
+ROUTE prox.orientation_changed TO xform.set_rotation
+
+# -------------------
+# Animate user action
+# -------------------
+ROUTE TOUCH2RIGHT.isActive TO Start2RIGHT.activated
+ROUTE TOUCH2LEFT.isActive TO Start2LEFT.activated
+ROUTE TIMER2RIGHT.fraction_changed TO INTERPOLATOR2RIGHT.set_fraction
+ROUTE TIMER2LEFT.fraction_changed TO INTERPOLATOR2LEFT.set_fraction
+ROUTE INTERPOLATOR2RIGHT.value_changed TO RotateTeil2Right.newValue
+ROUTE INTERPOLATOR2LEFT.value_changed TO RotateTeil2Left.newValue
+
+ROUTE TOUCH4RIGHT.isActive TO Start4RIGHT.activated
+ROUTE TOUCH4LEFT.isActive TO Start4LEFT.activated
+ROUTE TIMER4RIGHT.fraction_changed TO INTERPOLATOR4RIGHT.set_fraction
+ROUTE TIMER4LEFT.fraction_changed TO INTERPOLATOR4LEFT.set_fraction
+ROUTE INTERPOLATOR4RIGHT.value_changed TO RotateTeil4Right.newValue
+ROUTE INTERPOLATOR4LEFT.value_changed TO RotateTeil4Left.newValue
+
+ROUTE TOUCH5RIGHT.isActive TO Start5RIGHT.activated
+ROUTE TIMER5RIGHT.fraction_changed TO INTERPOLATOR5RIGHT.set_fraction
+ROUTE INTERPOLATOR5RIGHT.value_changed TO RotateTeil5Right.newValue
+ROUTE TOUCH5LEFT.isActive TO Start5LEFT.activated
+ROUTE TIMER5LEFT.fraction_changed TO INTERPOLATOR5LEFT.set_fraction
+ROUTE INTERPOLATOR5LEFT.value_changed TO RotateTeil5Left.newValue
+
+ROUTE TOUCH6RIGHT.isActive TO Start6RIGHT.activated
+ROUTE TIMER6RIGHT.fraction_changed TO INTERPOLATOR6RIGHT.set_fraction
+ROUTE INTERPOLATOR6RIGHT.value_changed TO RotateTeil6Right.newValue
+ROUTE TOUCH6LEFT.isActive TO Start6LEFT.activated
+ROUTE TIMER6LEFT.fraction_changed TO INTERPOLATOR6LEFT.set_fraction
+ROUTE INTERPOLATOR6LEFT.value_changed TO RotateTeil6Left.newValue
+
+ROUTE TOUCH7RIGHT.isActive TO Start7RIGHT.activated
+ROUTE TOUCH7LEFT.isActive TO Start7LEFT.activated
+ROUTE TIMER7RIGHT.fraction_changed TO INTERPOLATOR7RIGHT.set_fraction
+ROUTE TIMER7LEFT.fraction_changed TO INTERPOLATOR7LEFT.set_fraction
+ROUTE INTERPOLATOR7RIGHT.value_changed TO RotateTeil7Right.newValue
+ROUTE INTERPOLATOR7LEFT.value_changed TO RotateTeil7Left.newValue
+
+# -------------------------
+# robot is moving by itself
+# -------------------------
+ROUTE START.isActive TO StartScript.activated
+ROUTE StartScript.activ TO TIMER.set_enabled
+
+ROUTE TIMER.fraction_changed TO INTERPOLATOR.set_fraction
+ROUTE INTERPOLATOR.value_changed TO TRANSFORM2.set_rotation
+
+ROUTE TIMER.fraction_changed TO INTERPOLATOR4.set_fraction
+ROUTE INTERPOLATOR4.value_changed TO TRANSFORM4.set_rotation
+
+ROUTE TIMER.fraction_changed TO INTERPOLATOR5.set_fraction
+ROUTE INTERPOLATOR5.value_changed TO TRANSFORM5.set_rotation
+ROUTE INTERPOLATOR5.value_changed TO TRANSFORM6.set_rotation
+
+ROUTE TIMER.fraction_changed TO INTERPOLATOR7.set_fraction
+ROUTE INTERPOLATOR7.value_changed TO TRANSFORM7.set_rotation
+
+# ----------------------------
+# reset robots transformations
+# ----------------------------
+ROUTE RESET.isActive TO ResetScript.activated

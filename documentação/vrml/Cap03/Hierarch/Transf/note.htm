@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre Transform</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><I><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3>Transform</FONT></I></B>
+<FONT FACE="Arial"  SIZE=+2>
+
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+Transform {
+	translation ...
+	rotation ...
+	scale ...
+	children [...]
+}
+</XMP>
+</B>
+</FONT>
+
+<UL>
+<LI>Um nó <I>Transform</I> é um nó de agrupamento (<I>group node</I>) que cria um sistema de coordenadas local para o nós filhos. </LI>
+<BR><BR>
+<LI>A ordem de uma série de transformações definidas dentro de um mesmo nó <I>Transform</I> é fixa:
+<UL><BR>
+<LI> mudança de escala</LI>
+<LI> rotação</LI>
+<LI> translação</LI> 
+</UL><BR><BR>
+<LI>Para mudar a ordem das transformações, é necessário aninhar nós <I>Transfom</I>.
+</UL>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+</FONT>
+</BODY>
+</HTML>

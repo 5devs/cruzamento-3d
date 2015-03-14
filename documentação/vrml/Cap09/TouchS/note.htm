@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre TouchSensor</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><I><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3>TouchSensor</FONT></I></B>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+<UL>
+<LI>O nó <I>TouchSensor</I> monitora nós de geometria que pertencem ao seu grupo.</LI>
+<BR><BR>
+<LI>O nó gera eventos quando o cursor aponta para uma geometria por ele monitorada.</LI>
+<BR><BR>
+<LI>Eventos gerados: </LI>
+</UL>
+<CENTER>
+<TABLE  BORDER CELLSPACING=5 CELLPADDING=5 WIDTH="600" >
+<TR>
+<TD><FONT FACE="Arial" SIZE=+2>
+<B><I>isActive</I></B></FONT></TD> 
+<TD><FONT FACE="Arial" SIZE=+2>envia 
+TRUE/FALSE quando o botão do cursor é pressionado</FONT></TD>
+</TR>
+<TR>
+<TD><FONT FACE="Arial" SIZE=+2>
+<B><I> isOver </I></B></FONT></TD>
+<TD><FONT FACE="Arial" SIZE=+2>envia
+TRUE/FALSE quando o cursor é movido para dentro/fora de uma geometria </FONT></TD>
+</TR>
+<TR>
+<TD><FONT FACE="Arial" SIZE=+2>
+<B><I> hitPoint_changed </I></B></FONT></TD>
+<TD><FONT FACE="Arial" SIZE=+2> 
+ envia o ponto no objeto indicado pelo cursor 
+</FONT></TD>
+</TR>
+<TR>
+<TD><FONT FACE="Arial" SIZE=+2>
+<B><I> hitNormal_changed </I></B></FONT></TD>
+<TD><FONT FACE="Arial" SIZE=+2> 
+envia a normal à superfície do objeto no ponto indicado pelo cursor <FONT>
+</TD>
+</TR>
+<TR>
+<TD><FONT FACE="Arial" SIZE=+2>
+<B><I> hitTextCoord_changed </I></B></FONT></TD>
+<TD><FONT FACE="Arial" SIZE=+2> 
+envia a coordenada da textura no ponto indicado pelo cursor <FONT>
+</TD>
+</TR>
+<TR>
+<TD><FONT FACE="Arial" SIZE=+2>
+<B><I>touchTime </I></B></FONT></TD>
+<TD><FONT FACE="Arial" SIZE=+2>
+ envia a hora que o botão do cursor é solto
+<FONT>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+</BODY>
+</HTML>

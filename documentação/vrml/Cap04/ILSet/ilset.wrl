@@ -1,0 +1,44 @@
+#VRML V2.0 utf8
+#Curso de VRML 20
+#Beatriz Castier, Luciano Pereira dos Reis, Marcelo Cohen
+#
+#Exemplo de IndexedLineSet
+#Desenho das arestas de um cubo.
+
+#Eixos
+Inline { url "../coord.wrl" }
+
+#Desenha linhas com diferentes cores
+Shape {
+   appearance Appearance {
+   }
+   geometry IndexedLineSet {
+      coord Coordinate {
+         point [
+            # Cubo 
+             1.0  1.0  1.0,  1.0 -1.0  1.0, 
+            -1.0 -1.0  1.0, -1.0  1.0  1.0,
+             1.0  1.0 -1.0,  1.0 -1.0 -1.0, 
+            -1.0 -1.0 -1.0, -1.0  1.0 -1.0
+         ]
+      }
+      color Color {
+         color [
+            1.0 0.0 0.0, 0.0 1.0 0.0, 0.0 0.0 1.0
+         ]
+      }
+      coordIndex [
+         # Linha vermelha (paralela ao eixo x)
+         0, 3, -1, 1, 2, -1, 4, 7, -1, 5, 6, -1, 
+         # Linha verde (paralela ao eixo y)
+         0, 1, -1, 2, 3, -1, 4, 5, -1, 6, 7, -1,
+         # Linha azul (paralela ao eixo z)
+         0, 4, -1, 1, 5, -1, 2, 6, -1, 3, 7, -1
+      ]
+      colorIndex [
+         0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2
+      ]
+      colorPerVertex FALSE
+   }
+}
+

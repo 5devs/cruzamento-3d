@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Motiva&ccedil;&atilde;o para anima&ccedil;&atilde;o</TITLE>
+   <META NAME="Author" CONTENT="Marcelo Cohen">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+
+<P><!BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFFFF" VLINK="#888888" ALINK="#888888"><B><I><FONT FACE="Arial"><FONT COLOR="#FF9900"><FONT SIZE=+3>Um
+Exemplo usando o PositionInterpolator</FONT></FONT></FONT></I></B></P>
+
+<UL>
+<P><FONT FACE="Arial"><FONT COLOR="#FFFFFF"><FONT SIZE=+2>DEF Mover
+PositionInterpolator {<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key [ 0.0, . . . ]<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keyValue [ 0.0 0.0 0.0, . . .] } </FONT></FONT></FONT></P>
+
+<P><FONT FACE="Arial"><FONT COLOR="#FFFFFF"><FONT SIZE=+2>ROUTE Relogio.fraction_changed
+TO Mover.set_fraction</FONT></FONT></FONT></P>
+</UL>
+
+<UL>
+<P><FONT FACE="Arial"><FONT COLOR="#FFFFFF"><FONT SIZE=+2>ROUTE Mover.value_changed
+TO Objeto.set_translation</FONT></FONT></FONT></P>
+<CENTER><A HREF="floater.wrl"><IMG SRC="floater.gif" BORDER=0></A></CENTER>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+#Beatriz Castier, Luciano Pereira dos Reis, Marcelo Cohen
+#
+# Exemplo de som direcional baseado no livro VRML 2.0 Soucebook
+
+Group {
+   children [
+      Sound {
+         source AudioClip {
+            url "birds.wav"
+            loop TRUE
+         }
+         direction 	1.0 0.0 0.0
+         minFront  	5.0
+         minBack   	1.0
+         maxFront  	10.0
+         maxBack   	2.0
+         spatialize     TRUE
+      },
+      #Inclusao dos elipsoides.
+      Inline { url "emittere.wrl" }
+   ]
+}
+

@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre Collision</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><I><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3>Collision</FONT></I></B>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+<UL>
+<LI>O nó de agrupamento <B><I>Collision</I></B> pode ativar ou desativar a detecção 
+de colisão com determinados objetos na cena</LI>
+<BR><BR>
+<LI>A colisão ocorre quando o <I>avatar</I> do observador se aproxima de um objeto. 
+A distância de colisão é controloda pelo tamanho do avatar</LI>
+<BR><BR>
+<LI>A verificação de colisão é cara</LI><BR><BR>
+<UL> 
+<LI>Por <I>default</I>, estes testes são feitos pelo VRML. 
+Se possível, a detecção de colisão deve ser desativada, para melhorar o desempenho</LI>
+<BR><BR>
+<LI>Pode ser definida uma geometria bem mais simples (<I>proxy</I>) do objeto 
+para ser usada na detecção de colisão, mas que não é desenhada <BR><BR></L>
+</UL>
+<LI>Um nó <I>Collision</I> com um <I>proxy</I>, mas sem filhos, cria uma área de colisão invisível </LI>
+</UL>
+</BODY>
+</HTML>

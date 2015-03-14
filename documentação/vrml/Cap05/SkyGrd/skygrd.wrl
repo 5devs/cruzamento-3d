@@ -1,0 +1,20 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+#Beatriz Castier, Luciano Pereira dos Reis, Marcelo Cohen
+#
+#Exemplo de Background
+#
+Background {
+   groundColor [
+      0.10 0.10 0.0,   #A
+      0.25 0.15 0.1,   #B
+      0.60 0.60 0.20,  #C
+   ]
+   groundAngle [ 1.309, 1.571 ]
+   skyColor [
+      0.0 0.2 0.5,     #D
+      0.0 0.5 1.0,     #E
+      1.0 1.0 1.0,     #F
+   ]
+   skyAngle [ 1.309, 1.571 ]
+}

@@ -1,0 +1,160 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+#Rua
+Transform {
+	translation 0 .1 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material { 
+					diffuseColor .7 .7 .7
+				}
+			}
+			geometry Box { size 5 .2 20 }
+	  	}
+	  	Transform {
+	  		translation 2 .1 0
+			children [
+			  	DEF Calcada Shape {
+					  appearance Appearance {
+					    material Material { 
+					      diffuseColor .7 .7 .9
+					    }
+					  }
+					  geometry Box { size 1 .1 20 }
+				  }
+			  ]
+	  	}
+	  	Transform {
+	  		translation -2 .1 0
+	  		children [
+	  			USE Calcada
+	  		]
+	  	}
+	  	Transform {
+	  		translation -.1 .2 -5
+	  		children [
+	  			DEF Linha Shape {
+	  				appearance Appearance {
+					  material Material {  }
+					}
+					geometry IndexedFaceSet {
+					  coord Coordinate {
+					     point [
+							# Coordenadas do cubo
+							0 0 0, 		0.0 0 -1,
+							.2 0 -1, .2 0  0.0
+					     ]
+					  }
+				      coordIndex [
+				         0, 3, 2, 1, -1
+				      ]
+				      color Color {
+				         color [
+				            1.0 1.0 0.0
+				         ]
+				      }
+				      colorPerVertex   FALSE
+				      colorIndex  [ 
+				         0, 0, 1, 1, 2, 2, -1
+				      ]
+				    }
+	  			}
+	  		]
+	  	}
+	  	Transform {
+	  		translation -.1 .2 -3
+	  		children [
+	  			USE Linha
+	  		]
+  		}
+	  	Transform {
+	  		translation -.1 .2 -1
+	  		children [
+	  			USE Linha
+	  		]
+  		}
+	  	Transform {
+	  		translation -.1 .2 1
+	  		children [
+	  			USE Linha
+	  		]
+  		}
+	  	Transform {
+	  		translation -.1 .2 3
+	  		children [
+	  			USE Linha
+	  		]
+  		}
+	  	Transform {
+	  		translation -.1 .2 5
+	  		children [
+	  			USE Linha
+	  		]
+  		}
+	  	Transform {
+	  		translation -.1 .2 7
+	  		children [
+	  			USE Linha
+	  		]
+  		}
+	  	Transform {
+	  		translation -.1 .2 9
+	  		children [
+	  			USE Linha
+	  		]
+  		}
+
+  		# Faixa de pedestre
+	  	Transform {
+	  		translation .8 .2 -7
+	  		children [
+	  			DEF Faixa Shape {
+	  				appearance Appearance {
+					  material Material {  }
+					}
+					geometry IndexedFaceSet {
+					  coord Coordinate {
+					     point [
+							# Coordenadas do cubo
+							0 0 0, 		0.0 0 -2,
+							.4 0 -2, .4 0  0.0
+					     ]
+					  }
+				      coordIndex [
+				         0, 3, 2, 1, -1
+				      ]
+				      color Color {
+				         color [
+				            1.0 1.0 1.0
+				         ]
+				      }
+				      colorPerVertex   FALSE
+				      colorIndex  [ 
+				         0, 0, 1, 1, 2, 2, -1
+				      ]
+				    }
+	  			}
+	  		]
+	  	}
+	  	Transform {
+	  		translation .12 .2 -7
+	  		children [
+	  			USE Faixa
+	  		]
+  		}
+	  	Transform {
+	  		translation -.56 .2 -7
+	  		children [
+	  			USE Faixa
+	  		]
+  		}
+	  	Transform {
+	  		translation -1.24 .2 -7
+	  		children [
+	  			USE Faixa
+	  		]
+  		}
+		
+	  ]
+}

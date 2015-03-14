@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Referencias - Anchor</TITLE>
+</HEAD>
+
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#FFFFCC" ALINK="#3333FF">
+
+<B><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3><I>Anchor</I></FONT></B>
+<BR>
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+#VRML V2.0 utf8
+#  anchor.wrl
+#        by David R. Nadeau
+#
+# Este exemplo ilustra o uso de um no Anchor. Ao ser tocada a porta,
+# e mostrado um novo mundo.
+
+Transform {
+    translation 0.0 -2.5 0.0
+    children [
+        #
+        #  Three stairs
+        #
+        DEF Stair Shape {
+            appearance Appearance {
+                material Material {
+                    diffuseColor 1.0 1.0 1.0
+                }
+            }
+            geometry Box {
+                size 4.0 0.25 1.0
+            }
+        }
+        Transform {
+            translation 0.0 0.5 -1.0
+            children USE Stair
+        }
+        Transform {
+            translation 0.0 1.0 -2.0
+            children USE Stair
+        }
+
+
+        #
+        #  Door
+        #
+        Transform {
+            translation 0.0 4.125 -2.6
+            children [
+                Anchor {
+                    url "../stairwy.wrl"
+                    description "Twisty Stairs"
+                    children [
+                        # Door
+                        Shape {
+                            appearance Appearance {
+                                material Material {
+                                    diffuseColor 0.6 0.4 0.0
+                                }
+                            }
+                            geometry Box {
+                                size 3.0 6.0 0.2
+                            }
+                        }
+                        # Door knob
+                        Transform {
+                            translation 1.18 -0.0 0.2
+                            children [
+                                Shape {
+                                    appearance Appearance {
+                                        material Material {
+                                            diffuseColor 0.3 0.3 0.3
+                                        }
+                                    }
+                                    geometry Sphere {
+                                        radius 0.15
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+</XMP>
+</B>
+</FONT>
+</HTML>
+</BODY>
+</HTML>

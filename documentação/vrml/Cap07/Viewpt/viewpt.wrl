@@ -1,0 +1,117 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0 
+#Beatriz Castier, Luciano Pereira dos Reis, Marcelo Cohen
+#
+#Exemplo de Viewpoint
+#Varios viewpoints sao definidos. A descricao dada a cada viewpoint
+#aparece no menu do browser.
+
+NavigationInfo {
+       type [ "FLY", "WALK", "NONE" ]
+}
+#Definicao de Viewpoints
+Viewpoint {
+      position	388.792 65.1 -155.094
+      orientation	0 1 0  2.49563
+      fieldOfView	0.785398
+      description	"Partida"
+}
+Viewpoint {
+      position	325.77 93.1895 -7.871
+      orientation	0.0124789 0.998967 -0.0437027  2.58615
+      fieldOfView	0.785398
+      description	"Sobrevoo"
+}
+Viewpoint {
+      position	251.893 108.797 133.716
+      orientation	0.0119539 0.998743 -0.0486846  2.66125
+      fieldOfView	0.785398
+      description	"Aproximacao 1"
+}
+Viewpoint {
+      position	213.936 117.41 205.55
+      orientation	0.0128375 0.998521 -0.0528302  2.65621
+      fieldOfView	0.785398
+      description	"Aproximacao 2"
+}
+Viewpoint {
+      position	177.442 136.676 255.121
+      orientation	-0.0207172 0.997645 0.0653878  2.50848
+      fieldOfView	0.785398
+      description	"Aterrisagem"
+} 
+Viewpoint {
+      position	120.889 136.676 292.75
+      orientation	-0.0724514 0.995201 0.0657675  1.45809
+      fieldOfView	0.785398
+      description	"Cade a vista?"
+}
+Viewpoint {
+      position	88.1402 136.676 288.223
+      orientation	-0.112188 0.991497 0.0659398  1.04929
+      fieldOfView	0.785398
+      description	"Panoramica 1"
+}
+Viewpoint {
+      position	82.6939 136.676 280.971
+      orientation	-0.540162 0.839386 0.0604649  0.240427
+      fieldOfView	0.785398
+      description	"Panoramica 2"
+}
+Viewpoint {
+      position	80.4745 136.676 270.204
+      orientation	-0.831315 0.549261 0.085019  0.352082
+      fieldOfView	0.785398
+      description	"Precipicio"
+}
+Viewpoint {
+      position	87.006 136.676 249.984
+      orientation	-0.35404 -0.925391 -0.135306  0.792872
+      fieldOfView	0.785398
+      description	"Serra"
+}
+Viewpoint {
+      position	94.9145 136.676 245.219
+      orientation	-0.15514 -0.977357 -0.143893  1.52752
+      fieldOfView	0.785398
+      description	"Beirada"
+}
+Viewpoint {
+      position	133.561 136.676 257.71
+      orientation	0.0735363 0.986602 0.14563  4.05702
+      fieldOfView	0.785398
+      description	"Pela beirada 1"
+}
+Viewpoint {
+      position	182.621 136.676 284.117
+      orientation	0.110879 0.983205 0.144958  4.42223
+      fieldOfView	0.785398
+      description	"Pela beirada 2"
+}
+Viewpoint {
+      position	182.621 136.676 284.117
+      orientation	-0.289147 -0.943637 -0.161066  1.07448
+      fieldOfView	0.785398
+      description	"Outra vista"
+}
+Viewpoint {
+      position	182.621 136.676 284.117
+      orientation	-0.927435 -0.37206 -0.0378883  0.249544
+      fieldOfView	0.785398
+      description	"Cartao Postal"
+}
+
+Group {
+   children [
+      #Luz direcional
+      DirectionalLight { 
+         direction 0.0 -1.0 -0.2
+         intensity 1.0
+         ambientIntensity 0.7
+	   color 1.0 0.9 0.7
+      },
+
+      #Definicao do grid
+      Inline { url "egrid.wrl" }
+   ]
+}

@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Referencias - ImageTexture</TITLE>
+</HEAD>
+
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#FFFFCC" ALINK="#3333FF">
+
+<B><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3><I>ImageTexture</I></FONT></B>
+<BR>
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+#VRML V2.0 utf8
+#Exemplo - Texturas
+#Criacao de um vaso com flores. O vaso e mapeado com uma 
+#textura colorida e a textura das flores possui transparencia.
+
+#Definicao do ponto de vista inicial
+Viewpoint { 
+   position 0.0 5.0 18.0
+   description "Vista inicial"
+}
+
+#
+Group {
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture { url "marblec.jpg"}		
+         }
+         geometry Extrusion {
+            creaseAngle 1.57
+            endCap FALSE
+            solid  FALSE
+            crossSection [
+               #Definicao do circulo de crossSection 
+               1.00  0.00,   0.92 -0.38,
+               0.71 -0.71,   0.38 -0.92,
+               0.00 -1.00,  -0.38 -0.92,
+              -0.71 -0.71,  -0.92 -0.38,
+              -1.00 -0.00,  -0.92  0.38,
+              -0.71  0.71,  -0.38  0.92,
+               0.00  1.00,   0.38  0.92,
+               0.71  0.71,   0.92  0.38,
+               1.00  0.00
+            ]
+            spine [
+               #Spine
+               0.0 0.0 0.0,  0.0 0.6 0.0,
+               0.0 1.0 0.0,  0.0 1.4 0.0,
+               0.0 1.8 0.0,  0.0 2.2 0.0,
+               0.0 2.6 0.0,  0.0 3.0 0.0,
+               0.0 3.4 0.0,  0.0 3.8 0.0,
+               0.0 4.2 0.0
+            ]
+            scale [
+               1.5  1.5,  1.95 1.95,
+               2.0  2.0,  1.95 1.95
+               1.8  1.8,  1.5  1.5
+               1.2  1.2,  1.05 1.05,
+               1.0  1.0,  1.05  1.05,
+               1.3 1.3,
+            ]
+         }
+      },
+      Transform {
+         translation 0.0 6.8 0.0
+         children 
+            Shape {
+               appearance Appearance {
+                  #Textura com transparencia
+                  texture DEF flowers ImageTexture { 
+                     url "flowers.gif"
+                  }
+               }						
+               geometry  Box{ size 5.0 5.0 5.0 }
+           }
+      }
+      Transform {
+         translation 0.0 7.8 0.0
+         rotation     0.0 1.0 0.0 -0.75
+            children 
+               Shape {
+                  appearance Appearance {
+                     texture USE flowers
+                }						
+               geometry  Box { size 3.0 5.0 3.0 }
+           }
+       }
+   ]
+}
+</XMP>
+</B>
+</FONT>
+</HTML>
+</BODY>
+</HTML>

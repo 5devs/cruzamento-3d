@@ -1,0 +1,12 @@
+#VRML V2.0 utf8
+#Exemplo de ordem das transformações:
+#rotação e translação (ordem default em um Transform)
+Inline { url "../old_tcoord.wrl" }
+Transform {
+	rotation 0 0 1 0.8
+	translation 2 1 0
+	children [
+		Inline { url "../coord.wrl" },
+		Inline { url "../obj.wrl" }
+	]
+}

@@ -1,0 +1,174 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Referencias - Material</TITLE>
+</HEAD>
+
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#FFFFCC" ALINK="#3333FF">
+
+<B><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3><I>Material</I></FONT></B>
+<BR>
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+#VRML V2.0 utf8
+#Sao mostrados seis vasos de diferentes materiais.
+
+#Definicao do ponto de vista inicial.
+Viewpoint { 
+   position 0.0 3.0 15.0 
+   description "Vista inicial"
+}
+
+Group {
+   children [
+      #Iluminacao 
+      PointLight {
+         location 0.0 10.0 -9.0
+         ambientIntensity 0.2 
+      },
+      PointLight {
+         location 0.0 10.0 9.0
+         ambientIntensity 0.2 
+      },
+
+      Shape {
+         appearance Appearance {
+            # Material - aluminio 
+            material Material {
+               ambientIntensity 0.3
+               diffuseColor 0.30 0.30 0.50
+               specularColor 0.70 0.70 0.80
+               shininess 0.10
+            }
+         }
+         geometry  DEF vase Extrusion {
+            creaseAngle 1.57
+            endCap FALSE
+            solid  FALSE
+            crossSection [
+               #Definicao do circulo de crossSection
+               1.00  0.00,   0.92 -0.38,
+               0.71 -0.71,   0.38 -0.92,
+               0.00 -1.00,  -0.38 -0.92,
+              -0.71 -0.71,  -0.92 -0.38,
+              -1.00 -0.00,  -0.92  0.38,
+              -0.71  0.71,  -0.38  0.92,
+               0.00  1.00,   0.38  0.92,
+               0.71  0.71,   0.92  0.38,
+               1.00  0.00
+            ]
+            spine [
+               #Definicao de spine
+               0.0 0.0 0.0,  0.0 0.6 0.0,
+               0.0 1.0 0.0,  0.0 1.4 0.0,
+               0.0 1.8 0.0,  0.0 2.2 0.0,
+               0.0 2.6 0.0,  0.0 3.0 0.0,
+               0.0 3.4 0.0,  0.0 3.8 0.0,
+               0.0 4.2 0.0
+            ]
+            scale [
+               1.5  1.5,  1.95 1.95,
+               2.0  2.0,  1.95 1.95
+               1.8  1.8,  1.5  1.5
+               1.2  1.2,  1.05 1.05,
+               1.0  1.0,  1.05  1.05,
+               1.3 1.3,
+            ]
+         }
+      },
+      Transform  { 
+         translation -5.0 0.0 0.0
+         children [
+            Shape {
+               appearance Appearance {
+                  #Material - cobre
+                  material Material {
+                     ambientIntensity 0.26
+                     diffuseColor 0.30 0.11 0.00
+                     specularColor 0.75 0.33 0.00
+                     shininess 0.08
+                  } 
+               }
+               geometry USE vase 
+            }
+         ]
+      },
+      Transform  { 
+          translation 5.0 0.0 0.0
+          children [
+             Shape {
+                appearance Appearance {
+                   #Material - ouro
+                   material Material {
+                      ambientIntensity 0.4
+                      diffuseColor 0.22 0.15 0.00
+                      specularColor 0.71 0.70 0.56
+                      shininess 0.16
+                   } 
+                }
+                geometry USE vase 
+             }
+          ]
+       }
+       Transform  { 
+          translation -5.0 0.0 -5.0
+          children [
+             Shape {
+                appearance Appearance {
+                   # Material - vermelho metalico
+                   material Material {
+                      ambientIntensity 0.15
+                      diffuseColor 0.27 0.0 0.0
+                      specularColor 0.61 0.13 0.18
+                      shininess 0.20
+                   } 
+                }
+                geometry USE vase 
+             }
+          ]
+       }
+       Transform  { 
+          translation 0.0 0.0 -5.0
+          children [
+             Shape {
+                appearance Appearance {
+                   # Material - plastico azul
+                   material Material {
+                      ambientIntensity 0.10
+                      diffuseColor 0.20 0.20 0.71
+                      specularColor 0.83 0.83 0.83
+                      shininess 0.12
+                   } 
+                }
+                geometry USE vase 
+             }
+          ]
+       },
+       Transform  { 
+          translation 5.0 0.0 -5.0
+          children [
+             Shape {
+                appearance Appearance {
+                   # Material - transparencia
+                   material Material {
+                      ambientIntensity 0.5
+                      diffuseColor 0.0 0.0 0.2
+                      specularColor 1.0 1.0 1.0
+                      shininess 0.50
+                      transparency 0.5
+                  } 
+               }
+               geometry USE vase 
+            }
+         ]
+      }
+   ]
+}
+</XMP>
+</B>
+</FONT>
+</HTML>
+</BODY>
+</HTML>

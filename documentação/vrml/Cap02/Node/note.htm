@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre Nodes e Fields</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3><I>Nodes</I> e <I>Fields</I></B></FONT>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+<UL>
+<LI>Nós (<B><I>nodes</B></I>) são os blocos básicos de construção do mundo VRML. <BR>O nome ou tipo do nó indica 
+o objeto que ele descreve <BR>(<I>shapes, lights, sounds, groups, sensors, etc.</I>)</LI>
+<BR><BR>
+
+<LI>Todo nó tem um tipo (<I>Shape, PointLight, Box, ...</I>), um par de chaves, e campos opcionais</LI>
+<BR><BR>
+
+
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+Box { }
+</XMP>
+</B>
+</FONT>
+<BR><BR><BR>
+
+
+
+<LI>Campos (<B><I>fields</I></B>) definem os atributos de um nó</LI>
+<BR><BR>
+<LI>Todo campo tem um nome, um tipo e um valor default</LI><BR><BR>
+<LI>Os campos são opcionais, e seu valor default é utilizado caso não sejam especificados</LI><BR><BR>
+
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+Sphere { radius 2 }
+Box { size 2 3 1 }
+Shape { geometry Box { } }
+</XMP>
+</B>
+</FONT>
+
+</UL>
+</FONT>
+</BODY>
+</HTML>

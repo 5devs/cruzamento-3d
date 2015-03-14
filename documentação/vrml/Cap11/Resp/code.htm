@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Referencias - Nocoes de Scritping</TITLE>
+</HEAD>
+
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#FFFFCC" ALINK="#3333FF">
+
+<B><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3><I>Respondendo a Eventos</I></FONT></B>
+<BR>
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+#Exemplo de Script - Bola
+
+DEF Clock TimeSensor {
+    cycleInterval 2.0
+    startTime 1.0
+    stopTime 0.0
+    loop TRUE
+}
+
+DEF Bouncer Script {
+    field    SFFloat bounceHeight 3.0
+    eventIn  SFFloat set_fraction
+    eventOut SFVec3f value_changed
+
+    url "vrmlscript:
+        function set_fraction( frac, tm ) {
+            y = 4.0 * bounceHeight * frac * (1.0 - frac);
+            value_changed[0] = 0.0;
+            value_changed[1] = y;
+            value_changed[2] = 0.0;
+        }"
+}
+
+ROUTE Clock.fraction_changed TO Bouncer.set_fraction
+ROUTE Bouncer.value_changed  TO Ball.set_translation
+</XMP>
+</B>
+</FONT>
+</HTML>
+</BODY>
+</HTML>

@@ -1,0 +1,62 @@
+#VRML V2.0 utf8
+
+DEF view1 Viewpoint {
+			position 0 0 20
+			description "view1"
+}
+DEF view2 Viewpoint {
+			position 5 0 20
+			description "view2"
+}
+
+Group {
+	children [
+		DEF box Transform {
+			translation 5 0 0
+			children [
+				Shape {
+					appearance Appearance {	
+						material Material { diffuseColor 1 0 0 }
+					}
+					geometry Box { }
+				}
+				DEF touchBox TouchSensor { }
+			]
+		}
+		DEF sphere Transform {
+			translation 0 0 0
+			children [
+				Shape {
+					appearance Appearance {	
+						material Material { diffuseColor 0 1 0 }
+					}
+					geometry Sphere { }
+				}
+			]
+		}
+		DEF cone Transform {
+			translation -5 0 0
+			children [
+				Shape {
+					appearance Appearance {	
+						material Material { diffuseColor 0 0 1 }
+					}
+					geometry Cone { }
+				}
+			]
+		}
+	] # end of Group children
+}
+
+DEF touchScript Script {
+	eventIn SFBool touchBoxIsActive
+	eventOut SFBool bindView2
+	
+	url "vrmlscript:
+		function touchBoxIsActive(active) {
+			bindView2 = TRUE;
+		}"
+}
+
+ROUTE touchBox.isActive TO touchScript.touchBoxIsActive
+ROUTE touchScript.bindView2 TO view2.set_bind

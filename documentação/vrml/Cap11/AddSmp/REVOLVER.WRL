@@ -1,0 +1,31 @@
+#VRML V2.0 utf8
+
+DEF cube Transform {
+	rotation 0.5 0.5 0.5 1
+   children	[
+		Shape {
+ 			appearance	Appearance {
+    			material	Material { diffuseColor 1 0 0 }
+			}
+			geometry	Box {	}
+		}
+		DEF TouchS TouchSensor {}
+	]
+}
+DEF revolver Script {
+	eventIn SFBool startRevolving
+	eventOut SFRotation revolve
+	field SFFloat angle 0.5
+
+	url "vrmlscript:
+		function startRevolving() {
+			revolve[0] = 1;
+			revolve[1] = 1;
+			revolve[2] = 1;
+			revolve[3] = angle;
+			angle += 0.1;
+		}
+	"
+}
+ROUTE TouchS.isOver TO revolver.startRevolving
+ROUTE revolver.revolve TO cube.set_rotation

@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre IndexedFaceSet</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><I><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3>IndexedFaceSet</FONT></I></B>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+<UL>
+<LI> Superfícies curvas podem ser representadas por um conjunto de faces planas.
+No nó <B><I>IndexedFaceSet</I></B>, cada uma dessas faces é descrita através de uma lista de vértices e da especifição da ligação entre os vértices.</LI>
+<BR><BR>
+<A HREF="ifset.wrl"><IMG SRC="ifset.gif" BORDER=0 ALIGN=RIGHT></A>
+<LI>Para construir as faces:
+<BR>
+<UL>
+<LI>as coordenadas dos vértices são listadas no campo <I>coord</I>;</LI>
+<BR>
+<LI>no campo <I>coordIndex</I>, são definidas as ligações dos vértices.
+<BR>
+<BR>Exemplo: 0, 1, 2, 3, -1,...
+<BR>A face é formada pelos vértices 0, 1, 2 e 3
+<BR>-1 delimita a definição de uma face.
+</LI> 
+</UL>
+</FONT>
+</BODY>
+</HTML>

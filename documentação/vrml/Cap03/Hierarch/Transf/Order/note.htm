@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre Transform</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><I><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3>Ordem das transformações</FONT></I></B>
+<FONT FACE="Arial"  SIZE=+2>
+
+<UL>
+<LI>Para mudar a ordem das transformações é preciso usar <I>Transforms</I> aninhados</LI>
+<BR><BR>
+
+<CENTER>
+<TABLE COLS=2>
+<TR>
+<TD>
+<CENTER><A HREF="order1.wrl" TARGET="Top"><IMG SRC="order1.gif" BORDER=0></A></CENTER>
+</TD>
+<TD>
+<CENTER><A HREF="order2.wrl" TARGET="Top"><IMG SRC="order2.gif" BORDER=0></A></CENTER>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+<BR><BR>
+
+<LI><B>Atenção</B>: interpretando-se transformações como multiplicações de matrizes que afetam as 
+coordenadas de um objeto, é preciso pensar nas multiplicações ocorrendo na ordem inversa em 
+que aparecem no grafo da cena (código)<BR><BR>
+Em VRML, no entanto, a convenção é imaginar que uma transformação cria um <B>novo</B>
+sistema de coordenadas, preso ao objeto. Desta forma elas aparecem no código na ordem natural </LI>
+<BR><BR>
+</UL>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+</FONT>
+</BODY>
+</HTML>

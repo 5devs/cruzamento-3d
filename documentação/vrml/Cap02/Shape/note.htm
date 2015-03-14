@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Observacoes sobre Shape</TITLE>
+</HEAD>
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#C0C0C0" ALINK="#FF6600">
+<B><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3><I>Shape</I></FONT></B>
+<FONT FACE="Arial" COLOR="#FFFFFF" SIZE=+2>
+<UL>
+<LI><B><I>Shape</I></B> é o nó que descreve a geometria e a aparência de um objeto</LI>
+<BR><BR>
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+Shape {
+	appearance ...
+	geometry ...
+}
+</XMP>
+</B>
+</FONT>
+
+<LI>Para descrição de geometria, VRML fornece alguns nós básicos como <I>Sphere, Cylinder, Box</I>, <I>Cone</I>
+ e outros nós de geometria mais complexa</LI><BR><BR>
+<LI>Além da geometria, um <I>Shape</I> também possui propriedades, como material e textura, que definem seu aspecto.
+Estas propriedades são descritas no campo <B><I>appearance</I> </B>, com um nó <B><I>Appearance</I></B></LI>
+
+<XMP>
+Shape {
+	appearance Appearance {
+				material ...
+				texture ...	
+				...		
+		     }	
+	geometry ...
+}
+</XMP>
+</B>
+</FONT>
+
+</UL>
+</FONT>
+</BODY>
+</HTML>

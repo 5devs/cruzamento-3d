@@ -1,0 +1,48 @@
+#VRML V2.0 utf8
+#Beatriz Castier, Luciano Pereira dos Reis, Marcelo Cohen
+#
+#Exemplo de PointSet
+#Exibicao de pontos.
+
+#Eixos
+Inline { url "../coord.wrl" }
+
+#Conjunto de Pontos
+Shape {
+   appearance Appearance {
+   }
+   geometry PointSet {
+      coord Coordinate {
+         point [
+            #  Pontos ciano
+            1.0 1.0 1.0,  0.5 1.0 1.0,
+            1.5 1.5 1.5,  1.0 0.5 1.0, 
+            2.0 2.0 2.0,  1.0 1.0 0.5,
+            2.5 2.5 2.5,  1.5  2.0 2.0,
+            3.0 3.0 3.0,  2.0 1.5 2.0,
+            # Pontos Amarelos
+            -1.0 -1.0 -1.0,  -0.5 -1.0 -1.0,
+            -1.5 -1.5 -1.5,  -1.0 -0.5 -1.0, 
+            -2.0 -2.0 -2.0,  -1.0 -1.0 -0.5,
+            -2.5 -2.5 -2.5,  -1.5  -2.0 -2.0,
+            -3.0 -3.0 -3.0,  -2.0 -1.5 -2.0
+         ]
+     }
+     color Color {
+        color [
+           # Pontos ciano
+           0.0 1.0 1.0,   0.0 1.0 1.0,
+           0.0 1.0 1.0,   0.0 1.0 1.0, 
+           0.0 1.0 1.0,   0.0 1.0 1.0,
+           0.0 1.0 1.0,   0.0 1.0 1.0,
+           0.0 1.0 1.0,   0.0 1.0 1.0,
+           # Pontos amarelos
+           1.0 1.0 0.0,   1.0 1.0 0.0,
+           1.0 1.0 0.0,   1.0 1.0 0.0,
+           1.0 1.0 0.0,   1.0 1.0 0.0,
+           1.0 1.0 0.0,   1.0 1.0 0.0,
+           1.0 1.0 0.0,   1.0 1.0 0.0,
+        ]
+     }
+   }
+}

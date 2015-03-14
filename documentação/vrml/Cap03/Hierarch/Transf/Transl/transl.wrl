@@ -1,0 +1,11 @@
+#VRML V2.0 utf8
+# Exemplo de Translacao
+Inline { url "../old_tcoord.wrl" }
+
+Transform {
+	translation 0.8 0.8 0.8
+	children [
+		Inline { url "../coord.wrl" },
+		Inline { url "../obj.wrl" }
+	]
+}

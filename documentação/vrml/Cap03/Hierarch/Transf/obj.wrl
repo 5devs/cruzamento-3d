@@ -1,0 +1,52 @@
+#VRML V2.0 utf8
+# Um objeto alinhado
+Group {
+children [ 
+# Eixo Y
+Transform {
+      translation 0 0.4 0
+	children 
+		Shape {
+			appearance Appearance { 
+						material Material {
+						   		diffuseColor 0 1 0
+						}
+			}
+			geometry DEF Tube Cylinder { 
+							height 0.8
+							radius 0.5
+			}
+		}
+},
+
+#Eixo X
+Transform {
+      rotation 0 0 1 -1.57
+	translation 0.4 0 0
+	children 
+		Shape {
+			appearance Appearance { 
+						material Material {
+						   		diffuseColor 1 0 0
+						}
+			}
+			geometry USE Tube
+		}
+},
+
+#Eixo Z
+Transform {
+      rotation 1 0 0 1.57
+	translation 0 0 0.4
+      children 
+		Shape {
+			appearance Appearance { 
+						material Material {
+						   		diffuseColor 0 0 1
+						}
+			}
+			geometry USE Tube
+		}
+}
+]
+}

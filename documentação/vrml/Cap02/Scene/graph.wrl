@@ -1,0 +1,8 @@
+#VRML V2.0 utf8
+#Uma cena basica: um cilindro
+Shape {
+	appearance Appearance {
+		material Material {}
+	}
+	geometry Cylinder { }
+}

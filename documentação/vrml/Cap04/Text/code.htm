@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Beatriz Castier">
+    <TITLE>Referencias - Text</TITLE>
+</HEAD>
+
+<BODY TEXT="#FFFFFF" BGCOLOR="#000000" LINK="#FFFF00" VLINK="#FFFFCC" ALINK="#3333FF">
+
+<B><FONT FACE="Arial" COLOR="#FF9900" SIZE=+3><I>Text</I></FONT></B>
+<BR>
+<FONT FACE="Courier New,Courier"   SIZE=+2> 
+<B>
+<XMP>
+#VRML V2.0 utf8
+#Sao mostrados tres textos com diferentes caracteristicas.
+
+#Eixos
+Inline { url "../coord.wrl" }
+
+# Texto na posicao default
+Shape {
+   appearance Appearance { 
+      material Material { }
+   }
+   geometry Text {
+      string "Italic serif"
+      fontStyle FontStyle {
+         size   0.7
+         family "SERIF"
+         style  "ITALIC"
+      }
+   }
+}
+# Texto centralizado
+Transform { 
+   translation  0.0 3.0 0.0
+   children [
+      Shape {
+	    appearance Appearance {
+            material Material { }
+         }
+         geometry Text {
+            string ["Bold", "sans-serif"]
+            fontStyle FontStyle {
+               size 	 0.4
+               justify 	 "MIDDLE"
+               family 	 "SANS"
+               style 	 "BOLD"
+            }
+         }
+      }
+   ]
+}
+# Texto alinhado pelo fim
+Transform { 
+   translation 0.0 -1.0 0.0
+   children [
+      Shape {
+	    appearance Appearance { 
+            material Material{ }
+         }
+         geometry Text {
+            string "Roman typewriter"
+            fontStyle FontStyle {
+               size 	 0.5
+               family 	 "TYPEWRITER"
+               style 	 ""
+               justify	 "END"
+            }
+         }
+      }
+   ]
+}
+</XMP>
+</B>
+</FONT>
+</HTML>
+</BODY>
+</HTML>
