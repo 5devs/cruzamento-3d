@@ -1,6 +1,4 @@
 #VRML V2.0 utf8
-#Curso de VRML 2.0
-#Exemplo - Cylinder
 Transform {
 	translation 1 5 -50
 	children [
