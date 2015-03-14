@@ -6,11 +6,16 @@ Transform {
 	children [
 		# Rua
 		Shape {
-			appearance Appearance {
-				material Material { 
-					diffuseColor .7 .7 .7
-				}
-			}
+            appearance Appearance {
+                texture ImageTexture {
+                    repeatS TRUE
+                    repeatT TRUE
+                    url "textures/asfalto.jpg"
+                  }
+                textureTransform TextureTransform {
+                    scale 2 20
+                }
+            }
 			geometry Box { size 5 .2 20 }
 	  	}
 	  	Transform {
@@ -21,10 +26,15 @@ Transform {
 				children [
 				  	DEF Calcada Shape {
 						  appearance Appearance {
-						    material Material { 
-						      diffuseColor .7 .7 .9
-						    }
-						  }
+                              texture ImageTexture {
+                                repeatS TRUE
+                                repeatT TRUE
+                                url "textures/calcada.jpg"
+                              }
+                              textureTransform TextureTransform {
+                                 scale 1 20
+                              }
+                          }
 						  geometry Box { size 1 .1 20 }
 					  }
 					  Transform {
@@ -39,7 +49,7 @@ Transform {
 					  		}
 				  			# Arvore 1 - Normal
 				  			Transform {
-				  				translation 0 0 7
+				  				translation 0 0.05 7
 				  				scale .7 .7 .7
 				  				children [
 				  					Inline { url "arvore.wrl" }
@@ -47,7 +57,7 @@ Transform {
 				  			}
 				  			# Arvore 2 - Normal
 				  			Transform {
-				  				translation 0 0 -3
+				  				translation 0 0.05 -3
 				  				children [
 				  					Inline { url "arvore.wrl" }
 				  				]
@@ -77,7 +87,7 @@ Transform {
 		  			}
 		  			# Arvore 3 - Normal
 		  			Transform {
-		  				translation 0 0 5
+		  				translation 0 .1 5
 		  				children [
 		  					Inline { url "arvore.wrl" }
 		  				]

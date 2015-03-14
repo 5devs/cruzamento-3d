@@ -1,7 +1,6 @@
 #VRML V2.0 utf8
 #Projeto
 
-#Projeto
 Transform{
     children[
 
@@ -10,12 +9,12 @@ Transform{
         Transform {
             translation 0.0 -3 -10
             children [
-                DEF Rua Inline { url "rua.wrl" }
+                DEF Rua Inline { url "src/rua.wrl" }
                 Transform {
                     translation 3.7 0 0
                     rotation 0 1 0 -1.57
                     children [
-                        Inline { url "predio4.wrl" }
+                        Inline { url "src/predio4.wrl" }
                     ]
                 }
             ]
@@ -41,7 +40,7 @@ Transform{
                 Transform {
                     translation 5 0 -6.6
                     children [
-                        Inline { url "predio1.wrl"}
+                        Inline { url "src/predio1.wrl"}
                     ]
                 }
             ]
@@ -57,7 +56,7 @@ Transform{
                 Transform {
                     translation 5.5 0 -6
                     children [
-                        Inline { url "predio2.wrl"}
+                        Inline { url "src/predio2.wrl"}
                     ]
                 }
             ]
@@ -69,17 +68,39 @@ Transform{
             children [
                 Shape {
                     appearance Appearance {
-                        material Material {
-                            diffuseColor .7 .7 .7
+                        texture ImageTexture {
+                            repeatS TRUE
+                            repeatT TRUE
+                            url "src/textures/asfalto.jpg"
+                          }
+                        textureTransform TextureTransform {
+                            scale 2 4
                         }
                     }
-                    geometry Box { size 5 .2 20 }
+                    geometry Box { size 3 .2 4 }
                 }
             ]
         }
+
+
+        #Chão
+                Transform {
+                    translation 0 -3 -22
+                    children [
+                        Shape {
+                            appearance Appearance {
+                                material Material {
+                                    diffuseColor .7 .7 .7
+                                }
+                            }
+                            geometry Box { size 43 .2 45 }
+                        }
+                    ]
+                }
 
 
 
 
     ] #fim Children
 }
+

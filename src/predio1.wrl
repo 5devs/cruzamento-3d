@@ -33,6 +33,7 @@ Transform {
 	  						}
 	  					}
 
+                        #coluna central
 	  					Transform {
 	  						translation 0 5.4 0
 	  						children [
