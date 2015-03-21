@@ -58,6 +58,7 @@ Transform {
 					appearance Appearance {
 						material Material { 
 							diffuseColor 0 .7 0
+							# Aceso: 0 1 0
 						}
 					}
 					geometry Sphere {
@@ -74,6 +75,7 @@ Transform {
 					appearance Appearance {
 						material Material { 
 							diffuseColor .7 .7 0
+							# Aceso: 1 1 0
 						}
 					}
 					geometry Sphere {
@@ -90,6 +92,7 @@ Transform {
 					appearance Appearance {
 						material Material { 
 							diffuseColor .7 0 0
+							# Aceso: 1 0 0
 						}
 					}
 					geometry Sphere {

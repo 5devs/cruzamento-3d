@@ -3,7 +3,10 @@
 
 Transform{
     children[
-
+      PointLight {
+         location 0.0 15.0 0.0
+         radius   100.0
+      },
 
         #norte
         Transform {
@@ -37,11 +40,20 @@ Transform{
             translation -11.5 -3 -22
             children [
                 USE Rua
+
                 Transform {
                     translation 5 0 -6.6
                     children [
                         Inline { url "src/predio1.wrl"}
                     ]
+                }
+
+                Transform {
+                  translation 15 0 -5.2
+                  rotation 0 1 0 1.57
+                  children [
+                    Inline { url "src/predio5.wrl" }
+                  ]
                 }
             ]
         }
@@ -53,10 +65,11 @@ Transform{
             translation 11.5 -3 -22
             children [
                 USE Rua
+
                 Transform {
                     translation 5.5 0 -6
                     children [
-                        Inline { url "src/predio2.wrl"}
+                        Inline { url "src/predio2.wrl" }
                     ]
                 }
             ]
@@ -84,19 +97,19 @@ Transform{
 
 
         #Chão
-                Transform {
-                    translation 0 -3 -22
-                    children [
-                        Shape {
-                            appearance Appearance {
-                                material Material {
-                                    diffuseColor .7 .7 .7
-                                }
-                            }
-                            geometry Box { size 43 .2 45 }
+        Transform {
+            translation 0 -3 -22
+            children [
+                Shape {
+                    appearance Appearance {
+                        material Material {
+                            diffuseColor 0 .5 0
                         }
-                    ]
+                    }
+                    geometry Box { size 43 .2 45 }
                 }
+            ]
+        }
 
 
 
