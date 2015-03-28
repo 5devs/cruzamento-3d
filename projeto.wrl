@@ -147,18 +147,40 @@ Transform{
         }
 
         #Carro
-        Transform {
-            translation 0.8 -2.4 -10
-            rotation 0 1 0 -1.57
+        DEF Carro Transform {
+            translation 0.8 -2.4 -1
+            rotation 0 1 0 1.57
             scale 0.65 0.65 0.65
             children [
-                DEF Rua Inline { url "src/carro.wrl" }
+                 Inline { url "src/carro.wrl" }
             ]
         }
-
-
-
-
     ] #fim Children
+
 }
+
+#
+#  Animation
+#
+DEF Clock TimeSensor {
+    cycleInterval 10 
+    loop TRUE
+    startTime 0.10
+    stopTime 0
+}
+
+
+
+DEF Move PositionInterpolator {
+    key [ 0.0, 0.3, 0.5, 1.0 ]
+    keyValue [
+        0.8 -2.4 -1,
+        0.8 -2.4 -12,
+        0.8 -2.4 -14,
+        0.8 -2.4 -50,
+    ]
+}
+
+ROUTE Clock.fraction_changed TO Move.set_fraction
+ROUTE Move.value_changed TO Carro.set_translation
 
