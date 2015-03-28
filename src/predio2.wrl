@@ -4,12 +4,16 @@
 Transform {
 	translation 0 5 0
 	children [
-		# Rua
 		Shape {
 			appearance Appearance {
-				material Material { 
-					diffuseColor .7 .7 .7
-				}
+					texture ImageTexture {
+                        repeatS TRUE
+                        repeatT TRUE
+                        url "textures/predio2.jpg"
+                    }
+                    textureTransform TextureTransform {
+                         scale 1 5
+                    }
 			}
 			geometry Box { size 5 10 5 }
 	  	}
@@ -19,9 +23,14 @@ Transform {
 	  		children [
 			  	DEF bordaRedondaPredioMaior Shape {
 			  		appearance Appearance {
-						material Material { 
-							diffuseColor .7 .7 .7
-						}
+						texture ImageTexture {
+                            repeatS TRUE
+                            repeatT TRUE
+                            url "textures/concreto.jpg"
+                        }
+                        textureTransform TextureTransform {
+                             scale 2 10
+                        }
 					}
 					geometry Cylinder {
 						height 10
@@ -57,9 +66,14 @@ Transform {
 	  		children [
 	  			Shape {
 					appearance Appearance {
-						material Material { 
-							diffuseColor .7 .7 .7
-						}
+						texture ImageTexture {
+                            repeatS TRUE
+                            repeatT TRUE
+                            url "textures/predio2.jpg"
+                        }
+                        textureTransform TextureTransform {
+                             scale 1 2
+                        }
 					}
 					geometry Box { size 3.5 4 3.5 }			
 	  			}
@@ -69,9 +83,14 @@ Transform {
 			  		children [
 					  	DEF bordaRedondaPredioMenor Shape {
 					  		appearance Appearance {
-								material Material { 
-									diffuseColor .7 .7 .7
-								}
+								texture ImageTexture {
+                                    repeatS TRUE
+                                    repeatT TRUE
+                                    url "textures/concreto.jpg"
+                                }
+                                textureTransform TextureTransform {
+                                     scale 2 4
+                                }
 							}
 							geometry Cylinder {
 								height 4

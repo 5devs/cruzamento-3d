@@ -44,7 +44,7 @@ Transform {
 					  		Transform {
 					  			translation 0 0 -9.5
 					  			children [
-					  				Inline { url "semaforo2.wrl" }
+					  				Inline { url "semaforo.wrl" }
 								]
 					  		}
 				  			# Arvore 1 - Normal

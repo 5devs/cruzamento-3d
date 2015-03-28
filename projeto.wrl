@@ -39,7 +39,7 @@ Transform{
             rotation 0 1 0 4.7
             translation -11.5 -3 -22
             children [
-                USE Rua
+                DEF Rua2 Inline { url "src/rua2.wrl" }
 
                 Transform {
                     translation 6 0 -6
@@ -64,7 +64,7 @@ Transform{
             rotation 0 1 0 1.57
             translation 11.5 -3 -22
             children [
-                USE Rua
+                USE Rua2
 
                 Transform {
                     translation 5.5 0 -6
@@ -133,27 +133,49 @@ Transform{
 
         #Chão
         Transform {
-            translation 0 -3 -22
+            translation 0 -5.35 -22
             children [
                 Shape {
                     appearance Appearance {
-                        material Material {
-                            diffuseColor 0 .5 0
-                        }
+                       texture ImageTexture {
+                           repeatS TRUE
+                           repeatT TRUE
+                           url "src/textures/rua.jpg"
+                         }
+                       textureTransform TextureTransform {
+                           scale 2 4
+                       }
                     }
-                    geometry Box { size 43 .2 45 }
+                    geometry Box { size 43.5 5 45 }
                 }
             ]
         }
 
         #Carro
         DEF Carro Transform {
-            translation 0.8 -2.4 -1
             rotation 0 1 0 1.57
             scale 0.65 0.65 0.65
             children [
                  Inline { url "src/carro.wrl" }
             ]
+        }
+
+        #Carro
+            DEF Carro2 Transform {
+                rotation 0 0 0 1.57
+                scale 0.65 0.65 0.65
+                children [
+                     Inline { url "src/carro2.wrl" }
+                ]
+        }
+
+        #Carro
+            DEF Carro3 Transform {
+                rotation 0 3.14 0 1.57
+                scale 0.65 0.65 0.65
+                children [
+                     Inline { url "src/carro3.wrl" }
+                ]
         }
     ] #fim Children
 
@@ -163,24 +185,70 @@ Transform{
 #  Animation
 #
 DEF Clock TimeSensor {
-    cycleInterval 10 
+    cycleInterval 15
     loop TRUE
-    startTime 0.10
+    startTime 1
     stopTime 0
 }
 
-
-
+#Animação carro1
 DEF Move PositionInterpolator {
-    key [ 0.0, 0.3, 0.5, 1.0 ]
+    key [ 0.0, 0.4, 0.6, 1.0 ]
     keyValue [
-        0.8 -2.4 -1,
-        0.8 -2.4 -12,
-        0.8 -2.4 -14,
-        0.8 -2.4 -50,
+        0.8 -2.6 -1,
+        0.8 -2.6 -14,
+        0.8 -2.6 -14,
+        0.8 -2.6 -43,
     ]
 }
 
 ROUTE Clock.fraction_changed TO Move.set_fraction
 ROUTE Move.value_changed TO Carro.set_translation
 
+
+
+#Animação carro2
+DEF Move2 PositionInterpolator {
+    key [ 0.0, 1.0 ]
+    keyValue [
+        -20 -2.6 -21.3,
+        22 -2.6 -21.3
+    ]
+}
+
+ROUTE Clock.fraction_changed TO Move2.set_fraction
+ROUTE Move2.value_changed TO Carro2.set_translation
+
+#Animação carro3
+DEF Move3 PositionInterpolator {
+    key [ 0.0, 0.4, 0.6, 1.0 ]
+    keyValue [
+        -0.8 -2.6 -43,
+        -0.8 -2.6 -30,
+        -0.8 -2.6 -30,
+        -0.8 -2.6 -1
+    ]
+}
+
+ROUTE Clock.fraction_changed TO Move3.set_fraction
+ROUTE Move3.value_changed TO Carro3.set_translation
+
+
+Background {
+    skyColor [
+        0.0 0.2 0.7,
+        0.0 0.5 1.0,
+        1.0 1.0 1.0
+    ]
+    skyAngle [ 1.309, 1.571 ]
+    groundColor [
+        0.1 0.10 0.0,
+        0.4 0.25 0.2,
+        0.6 0.60 0.6,
+    ]
+    groundAngle [ 1.309, 1.571 ]
+    frontUrl "src/textures/bg.jpg"
+    backUrl  "src/textures/bg.jpg"
+    leftUrl  "src/textures/bg.jpg"
+    rightUrl "src/textures/bg.jpg"
+}

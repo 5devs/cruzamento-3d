@@ -24,9 +24,14 @@ Transform {
 	  				children [
 	  					Shape {
 	  						appearance Appearance {
-	  							material Material {
-	  								diffuseColor .7 .7 .7
-	  							}
+	  							texture ImageTexture {
+                                    repeatS TRUE
+                                    repeatT TRUE
+                                    url "textures/predio1.jpg"
+                                  }
+                                  textureTransform TextureTransform {
+                                       scale 1 2
+                                    }
 	  						}
 	  						geometry Box {
 	  							size 3.5 10 3.5
@@ -39,9 +44,11 @@ Transform {
 	  						children [
 	  							Shape {
 	  								appearance Appearance {
-			  							material Material {
-			  								diffuseColor .7 .7 .7
-			  							}
+			  							texture DEF TIJOLO ImageTexture {
+                                            repeatS TRUE
+                                            repeatT TRUE
+                                            url "textures/tijolo.jpg"
+                                          }
 	  								}
 	  								geometry Box {
 	  									size 1.5 .8 1
@@ -57,9 +64,11 @@ Transform {
 			  		children [
 			  			DEF coluna Shape {
 			  				appearance Appearance {
-								material Material { 
-									diffuseColor .7 .7 .7
-								}
+								texture DEF TIJOLO ImageTexture {
+                                    repeatS TRUE
+                                    repeatT TRUE
+                                    url "textures/tijolo.jpg"
+                                  }
 							}
 							geometry Cylinder {
 								height .5

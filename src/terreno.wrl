@@ -1,6 +1,6 @@
 #VRML V2.0 utf8
 Transform {
-	translation 1 5 -50
+	translation 1 0 -10
 	children [
 		Shape {
 			  appearance Appearance {

@@ -1,0 +1,95 @@
+#VRML V2.0 utf8 
+# de Carlos Salgado. GNU-GPL. 15-12-05 
+# modificado por nramire1 
+
+DEF coche Transform { 
+            rotation 1 0 0 -1.57
+	children [ 
+		DEF cabina Transform { 
+			scale 1.279999 1 0.720000 
+			translation -9.999997e-2 1.999999e-2 0.659999
+			children [ 
+				Shape { 
+					appearance Appearance { 
+						material Material { 
+							diffuseColor .55 .53 .05 
+							specularColor .77 .12 1 
+							emissiveColor .23 .12 .02 
+							ambientIntensity 0 
+							shininess .04 
+							transparency .53 
+						} 
+					} 
+					
+					geometry Cylinder { 
+						height 1.379999 
+						radius 0.800000 
+					} 
+				} 
+			] 
+		} 
+
+		DEF rueda_delant Transform {
+			translation 0.879998 0 0  
+			children [ 
+				Shape { 
+					appearance Appearance { 
+						material Material { 
+							diffuseColor .09 .03 0 
+							specularColor .22 .1 .1 
+							ambientIntensity .01 
+							shininess .05 
+						}
+					} 
+
+					geometry Cylinder { 
+						height 1.740000 
+						radius 0.419999 
+					} 
+				} 
+			] 
+		}
+
+		DEF rueda_tras Transform { 
+			translation -0.899999 0 0 
+			center 0 -0.442456 0 
+			children [ 
+				Shape { 
+					appearance Appearance { 
+						material Material { 
+							diffuseColor 0 0 0 
+							specularColor .29 .3 .29 
+							ambientIntensity 0 
+							shininess .08 
+						} 
+					} 
+			
+					geometry Cylinder { 
+						height 1.759999 
+						radius 0.419999 
+					} 
+				} 
+			] 
+		} 
+
+		DEF trozo_coche Transform { 
+			translation 3.999999e-2 0 0.319999 
+			children [ 
+				Shape { 
+					appearance Appearance { 
+						material Material { 
+							diffuseColor .0 .5 0
+							specularColor .5 .5 .5 
+							emissiveColor .15 .03 0 
+							ambientIntensity 0 
+						} 
+					} 
+		
+					geometry Box { 
+						size 3.099997 1.439998 0.680000 
+					} 
+				} 
+			] 
+		} 
+	]
+} 

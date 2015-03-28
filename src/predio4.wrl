@@ -7,9 +7,14 @@ Transform {
 		# Torre 1
 		DEF Torre Shape {
 			appearance Appearance {
-				material Material { 
-					diffuseColor .7 .7 .7
-				}
+					texture ImageTexture {
+                        repeatS TRUE
+                        repeatT TRUE
+                        url "textures/predio4.jpg"
+                    }
+                    textureTransform TextureTransform {
+                         scale 1 10
+                    }
 			}
 			geometry Box {
 				size 2.5 16 2.5
@@ -25,9 +30,14 @@ Transform {
 	  					# Mastro
 		  				Shape {
 		  					appearance Appearance {
-		  						material Material {
-		  							diffuseColor .7 .7 .7
-		  						}
+                                texture ImageTexture {
+                                    repeatS TRUE
+                                    repeatT TRUE
+                                    url "textures/tijolo.jpg"
+                                }
+                                textureTransform TextureTransform {
+                                     scale .5 10
+                                }
 		  					}
 		  					geometry Cylinder {
 		  						height 2.5

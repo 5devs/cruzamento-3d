@@ -56,7 +56,7 @@ Transform {
 			children [
 				Shape {
 					appearance Appearance {
-						material DEF Verde Material {
+						material DEF Verde  Material {
 
 						}
 					}
@@ -71,11 +71,11 @@ Transform {
 			translation -1.55 .9 .08
 			children [
 				Shape {
-                    appearance Appearance {
-                        material DEF Amarelo  Material {
-                            #animacao
-                        }
-                    }
+					appearance Appearance {
+						material DEF Amarelo  Material {
+							#animacao
+						}
+					}
 					geometry Sphere {
 						radius .13
 					}
@@ -83,15 +83,15 @@ Transform {
 			]
 		}
 		# Luz Vermelha
-		Transform {
+		 Transform {
 			translation -1.55 1.25 .08
 			children [
 				Shape {
 					appearance Appearance {
-                        material DEF Vermelho Material {
+						material DEF Vermelho Material {
 
-                        }
-                    }
+						}
+					}
 					geometry Sphere {
 						radius .13
 					}
@@ -117,15 +117,15 @@ DEF Clock TimeSensor {
 DEF FecharSemafaro ColorInterpolator {
 	key [ 0.0, 0.2, 0.21, 0.34, 0.35, 0.39, 0.58, 0.59, 0.6, 1.0 ]
 	keyValue [
-		1 0 0,
-		1 0 0,
-		.5 0 0,
 		.5 0 0,
 		.5 0 0,
 		.5 0 0,
 		.5 0 0,
 		1 0 0,
 		1 0 0,
+		1 0 0,
+		.5 0 0,
+		.5 0 0
 	]
 }
 
@@ -134,11 +134,11 @@ DEF Alerta ColorInterpolator {
 	keyValue [
 		.5 .5 0,
 		.5 .5 0,
-		.5 .5 0,
-		.5 .5 0,
-		.5 .5 0,
-		.5 .5 0,
 		1 1 0,
+		1 1 0,
+		.5 .5 0,
+		.5 .5 0,
+		.5 .5 0,
 		.5 .5 0,
 	]
 }
@@ -146,15 +146,15 @@ DEF Alerta ColorInterpolator {
 DEF Abrir ColorInterpolator {
 	key [ 0.0, 0.2, 0.21, 0.34, 0.35, 0.39, 0.58, 0.59, , 0.6, 0.61, 1.0 ]
 	keyValue [
+		0 1 0,
+		0 1 0,
+		0, .5, 0,
+		0, .5, 0,
 		0, .5, 0,
 		0, .5, 0,
 		0, .5, 0,
 		0, 1, 0,
-		0 1 0,
-		0 1 0,
-		0, .5, 0,
-		0, .5, 0,
-		0, .5, 0,
+		0, 1, 0
 	]
 }
 
@@ -166,3 +166,4 @@ ROUTE Alerta.value_changed  TO Amarelo.set_diffuseColor
 
 ROUTE Clock.fraction_changed TO Abrir.set_fraction
 ROUTE Abrir.value_changed  TO Verde.set_diffuseColor
+
