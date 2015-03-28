@@ -14,10 +14,10 @@ Transform{
             children [
                 DEF Rua Inline { url "src/rua.wrl" }
                 Transform {
-                    translation 3.7 0 0
+                    translation 5 0 0
                     rotation 0 1 0 -1.57
                     children [
-                        Inline { url "src/predio4.wrl" }
+                        DEF Gemeas Inline { url "src/predio4.wrl" }
                     ]
                 }
             ]
@@ -42,14 +42,14 @@ Transform{
                 USE Rua
 
                 Transform {
-                    translation 5 0 -6.6
+                    translation 6 0 -6
                     children [
-                        Inline { url "src/predio1.wrl"}
+                        DEF Predio1 Inline { url "src/predio1.wrl"}
                     ]
                 }
 
                 Transform {
-                  translation 15 0 -5.2
+                  translation 14 0 -4.2
                   rotation 0 1 0 1.57
                   children [
                     Inline { url "src/predio5.wrl" }
@@ -69,11 +69,46 @@ Transform{
                 Transform {
                     translation 5.5 0 -6
                     children [
-                        Inline { url "src/predio2.wrl" }
+                        DEF Predio2 Inline { url "src/predio2.wrl" }
                     ]
                 }
             ]
         }
+		
+		#predio
+		Transform {
+            rotation 0 1 0 1.57
+            translation 17.5 -3 -15
+            children [
+                USE Predio1
+            ]
+        }
+		
+		Transform {
+            rotation 0 1 0 1.57
+            translation 17.5 -3 -5
+            children [
+                USE Predio2
+            ]
+        }
+		
+		Transform {
+            rotation 0 1 0 1.57
+            translation -17.5 -3 -5
+            children [
+                USE Predio2
+            ]
+        }
+		
+		#use gemeas
+		Transform {
+            rotation 0 1 0 0
+            translation -15 -3 -15
+            children [
+                USE Gemeas
+            ]
+        }
+		
 
         #Parte central da rua
         Transform {
