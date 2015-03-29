@@ -311,3 +311,32 @@ Background {
     leftUrl  "src/textures/bg.jpg"
     rightUrl "src/textures/bg.jpg"
 }
+
+Viewpoint {
+      position	0 0 5
+      orientation	0 4 0  0
+      fieldOfView	0.785398
+     description	"Visão Inicio"
+}
+
+Viewpoint {
+      position	15 12 5
+      orientation	-1 1.5 1 .8
+      fieldOfView	0.785398
+     description	"Visão do canto"
+}
+
+
+Viewpoint {
+      position	0 0 -50
+      orientation	0 4 0  2.49563
+      fieldOfView	0.785398
+     description	"Visão do mar"
+}
+
+Viewpoint {
+      position	0 5 -30
+      orientation	0 2 1  3
+      fieldOfView	0.785398
+      description	"Visão do semafaro"
+}
