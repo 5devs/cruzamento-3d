@@ -180,6 +180,36 @@ Transform{
              ]
          }
 
+         DEF Cerca Transform {
+             rotation 0 1 0 1.57
+             translation -2.4 -2.2 -24.6
+             children [
+                  Inline { url "src/cerca.wrl" }
+             ]
+         }
+         Transform {
+              translation 0 0 -10
+              children [
+                   USE Cerca
+              ]
+         }
+         Transform {
+               rotation 3.14 0 3.14 3.14
+               translation 22 -4.4 -22
+               children [
+                    USE Cerca
+               ]
+          }
+          Transform {
+             rotation 3.14 0 3.14 3.14
+             translation 12 -4.4 -22
+             children [
+                  USE Cerca
+             ]
+          }
+
+
+
         #Carro
         DEF Carro Transform {
             rotation 0 1 0 1.57
