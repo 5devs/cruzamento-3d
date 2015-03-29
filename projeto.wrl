@@ -320,7 +320,7 @@ Viewpoint {
 }
 
 Viewpoint {
-      position	15 12 5
+      position	3 12 -7
       orientation	-1 1.5 1 .8
       fieldOfView	0.785398
      description	"Visão do canto"
