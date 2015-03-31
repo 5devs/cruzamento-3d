@@ -17,22 +17,11 @@ Transform{
                     translation 5 0 0
                     rotation 0 1 0 -1.57
                     children [
-                        DEF Gemeas Inline { url "src/predio4.wrl" }
+                        DEF Predio4 Inline { url "src/predio4.wrl" }
                     ]
                 }
             ]
-
         }
-
-        #sul
-        Transform {
-            rotation 0 1 0 3.1415
-            translation 0 -3 -34
-            children [
-                USE Rua
-            ]
-        }
-
 
         #esquerda
         Transform {
@@ -58,7 +47,6 @@ Transform{
             ]
         }
 
-
         #direita
         Transform {
             rotation 0 1 0 1.57
@@ -67,7 +55,7 @@ Transform{
                 USE Rua2
 
                 Transform {
-                    translation 5.5 0 -6
+                    translation 6.5 0 -5
                     children [
                         DEF Predio2 Inline { url "src/predio2.wrl" }
                     ]
@@ -75,6 +63,51 @@ Transform{
             ]
         }
 		
+        #sul
+        Transform {
+            rotation 0 1 0 3.1415
+            translation 0 -3 -34
+            children [
+                USE Rua
+            ]
+        }
+
+        #predio6
+        Transform {
+            rotation 0 1 0 1.57
+            translation 20.20 0.15 -40
+            children [
+                DEF Predio6 Inline { url "src/predio6.wrl"}
+            ]
+        }
+
+        #predio6
+        Transform {
+            rotation 0 1 0 1.57
+            translation 12.20 0.15 -40
+            children [
+                USE Predio6
+            ]
+        }
+        
+        #predio6
+        Transform {
+            rotation 0 1 0 1.57
+            translation 4.20 0.15 -40
+            children [
+                USE Predio6
+            ]
+        }
+
+        #predio6
+        Transform {
+            rotation 0 1 0 1.57
+            translation 20.20 0.15 -30
+            children [
+                USE Predio6
+            ]
+        }
+
 		#predio
 		Transform {
             rotation 0 1 0 1.57
@@ -84,31 +117,37 @@ Transform{
             ]
         }
 		
+        #TESTE QUARTEIRÃO TORRE GEMEAS
 		Transform {
             rotation 0 1 0 1.57
-            translation 17.5 -3 -5
+            translation 16 0.65 -6
             children [
-                USE Predio2
+                DEF Predio9 Inline { url "src/predio9.wrl"}
             ]
         }
 		
 		Transform {
             rotation 0 1 0 1.57
-            translation -17.5 -3 -5
+            translation -17.5 0.65 -5
             children [
-                USE Predio2
+                USE Predio9
             ]
         }
+        #FIM TESTE QUARTEIRÃO TORRE GEMEAS
 		
-		#use gemeas
+        Transform {
+            translation 6 3.15 -4
+            children [
+                DEF Predio7 Inline { url "src/predio7.wrl"}
+            ]
+        }
+
 		Transform {
-            rotation 0 1 0 0
-            translation -15 -3 -15
+            translation -16 -0.85 -15
             children [
-                USE Gemeas
+                DEF Predio8 Inline { url "src/predio8.wrl"}
             ]
         }
-		
 
         #Parte central da rua
         Transform {
@@ -130,7 +169,6 @@ Transform{
             ]
         }
 
-
         #Chão
         DEF Chao Transform {
             translation 0 -5.35 -12
@@ -150,6 +188,7 @@ Transform{
                 }
             ]
         }
+
         #chao lado do rio
          Transform {
             translation 10 0 -20
@@ -208,8 +247,6 @@ Transform{
              ]
           }
 
-
-
         #Carro
         DEF Carro Transform {
             rotation 0 1 0 1.57
@@ -236,6 +273,96 @@ Transform{
                      Inline { url "src/carro3.wrl" }
                 ]
         }
+
+        #Carros Estacionados 
+            Transform {
+                translation 17 -2.6 -28.5
+                children [
+                    DEF CarroEstacionado Transform {
+                        scale 0.65 0.65 0.65
+                        children [
+                            Inline { url "src/carro.wrl"}
+                        ]
+                    }
+                ]
+            }
+
+            Transform {
+                translation 17.2 -2.6 -30
+                children [
+                    DEF CarroEstacionado2 Transform {
+                        scale 0.65 0.65 0.65
+                        children [
+                            Inline { url "src/carro2.wrl"}
+                        ]
+                    }
+                ]
+            }
+            
+            Transform {
+                translation 17 -2.6 -31.5
+                children [
+                    DEF CarroEstacionado3 Transform {
+                        scale 0.65 0.65 0.65
+                        children [
+                            Inline { url "src/carro3.wrl"}
+                        ]
+                    }
+                ]
+            }
+
+            Transform {
+                translation 17.4 -2.6 -38.2
+                children [
+                    USE CarroEstacionado3
+                ]
+            }
+
+            Transform {
+                translation 17.4 -2.6 -38.2
+                children [
+                    USE CarroEstacionado
+                ]
+            }
+
+            Transform {
+                translation 17.4 -2.6 -38.2
+                children [
+                    USE CarroEstacionado3
+                ]
+            }
+
+            Transform {
+                rotation 0 1 0 3.14
+                translation 15 -2.6 -39.5
+                children [
+                    USE CarroEstacionado
+                ]
+            }
+
+            Transform {
+                rotation 0 1 0 3.14
+                translation 15 -2.6 -41
+                children [
+                    USE CarroEstacionado2
+                ]
+            }
+
+            Transform {
+                translation 9.5 -2.6 -41
+                children [
+                    USE CarroEstacionado3
+                ]
+            }
+
+            Transform {
+                rotation 0 1 0 3.14
+                translation 7 -2.6 -39
+                children [
+                    USE CarroEstacionado
+                ]
+            }        
+
     ] #fim Children
 
 }

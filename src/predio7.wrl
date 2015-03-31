@@ -1,0 +1,20 @@
+#VRML V2.0 utf8
+#Curso de VRML 2.0
+# Prédio 7 http://www.google.com.br/imgres?imgurl=http://www.r2cpress.com.br/v1/wp-content/uploads/141.jpeg&imgrefurl=http://www.r2cpress.com.br/v1/2013/03/15/do-fundo-do-bau-de-jose-leite-105/&h=450&w=680&tbnid=fEekv27S489U5M:&zoom=1&docid=7TaCnz4FFzRHmM&ei=BAYaVaacBa_jsAT36oD4CA&tbm=isch&ved=0CCAQMygEMAQ
+
+Transform {
+	children [
+		Shape {
+			appearance Appearance {
+            	material Material { 
+            		diffuseColor 0.7 0.7 0.7
+            	}    
+            }
+
+			geometry Cylinder {
+				height 12
+		  		radius 2.5
+			}
+		}
+	]
+}
