@@ -192,10 +192,22 @@ Transform{
 
         #chao lado do rio
          Transform {
-            translation 10 0 -20
+            translation 10 -5.35 -32
             scale 0.54 1 1
             children [
-                 USE Chao
+                  Shape {
+                    appearance Appearance {
+                       texture ImageTexture {
+                           repeatS TRUE
+                           repeatT TRUE
+                           url "src/textures/chao-estacionamento.jpg"
+                         }
+                       textureTransform TextureTransform {
+                           scale 2 4
+                       }
+                    }
+                    geometry Box { size 43.5 5 25 }
+                }
             ]
          }
 
