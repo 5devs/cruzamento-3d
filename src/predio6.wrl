@@ -6,10 +6,15 @@ Transform {
 	children [
 		Shape {
 			appearance Appearance {
-            	material Material { 
-            		diffuseColor 0.7 0.7 0.7
-            	}    
-            }
+				texture ImageTexture {
+					repeatS TRUE
+					repeatT TRUE
+					url "textures/predio6.jpg"
+				  }
+				textureTransform TextureTransform {
+					scale 1 1
+				}
+			}
 
 			geometry Box {
 				size 5 6 3
