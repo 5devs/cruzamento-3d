@@ -1,6 +1,15 @@
 #VRML V2.0 utf8
 #Projeto
 
+########################################
+#
+# Authors: Erik Zerbinatti
+#          Gabriel Malaquias
+#          Guilherme Ventura
+#          Luiz Fernando Santos
+#
+#######################################
+
 Transform{
     children[
       PointLight {
@@ -8,15 +17,22 @@ Transform{
          radius   100.0
       },
 
-        #norte
         Transform {
             translation 0.0 -3 -10
             children [
+#
+# Rua
+#
                 DEF Rua Inline { url "src/rua.wrl" }
                 Transform {
                     translation 5 0 0
                     rotation 0 1 0 -1.57
                     children [
+
+#
+# Predio 
+#
+
                         DEF Predio4 Inline { url "src/predio4.wrl" }
                     ]
                 }
@@ -28,11 +44,17 @@ Transform{
             rotation 0 1 0 4.7
             translation -11.5 -3 -22
             children [
+#
+# Rua
+#
                 DEF Rua2 Inline { url "src/rua2.wrl" }
 
                 Transform {
                     translation 6 0 -6
                     children [
+#
+# Predio
+#
                         DEF Predio1 Inline { url "src/predio1.wrl"}
                     ]
                 }
@@ -41,6 +63,9 @@ Transform{
                   translation 14 0 -4.2
                   rotation 0 1 0 1.57
                   children [
+#
+# Predio
+#
                     Inline { url "src/predio5.wrl" }
                   ]
                 }
@@ -52,11 +77,17 @@ Transform{
             rotation 0 1 0 1.57
             translation 11.5 -3 -22
             children [
+#
+# Rua
+#
                 USE Rua2
 
                 Transform {
                     translation 6.5 0 -5
                     children [
+#
+# Predio
+#
                         DEF Predio2 Inline { url "src/predio2.wrl" }
                     ]
                 }
@@ -68,6 +99,9 @@ Transform{
             rotation 0 1 0 3.1415
             translation 0 -3 -34
             children [
+#
+# Rua
+#
                 USE Rua
             ]
         }
@@ -77,6 +111,9 @@ Transform{
             rotation 0 1 0 1.57
             translation 20.20 0.15 -40
             children [
+#
+# Predio
+#
                 DEF Predio6 Inline { url "src/predio6.wrl"}
             ]
         }
@@ -86,6 +123,9 @@ Transform{
             rotation 0 1 0 1.57
             translation 12.20 0.15 -40
             children [
+#
+# Predio
+#
                 USE Predio6
             ]
         }
@@ -95,6 +135,9 @@ Transform{
             rotation 0 1 0 1.57
             translation 4.20 0.15 -40
             children [
+#
+# Predio
+#
                 USE Predio6
             ]
         }
@@ -104,6 +147,9 @@ Transform{
             rotation 0 1 0 1.57
             translation 20.20 0.15 -30
             children [
+#
+# Predio
+#
                 USE Predio6
             ]
         }
@@ -113,16 +159,21 @@ Transform{
             rotation 0 1 0 1.57
             translation 17.5 -3 -15
             children [
+#
+# Predio
+#
                 USE Predio1
             ]
         }
 		
-        #TESTE QUARTEIRÃO TORRE GEMEAS
 		Transform {
             rotation 0 1 0 1.57
             translation 16 0.65 -6
 			
             children [
+#
+# Predio
+#
                 DEF Predio9 Inline { url "src/predio9.wrl"}
             ]
         }
@@ -131,6 +182,9 @@ Transform{
             rotation 0 1 0 1.57
             translation -17.5 0.65 -5
             children [
+#
+# Predio
+#
                 USE Predio9
             ]
         }
@@ -139,6 +193,9 @@ Transform{
         Transform {
             translation 6 3.15 -4
             children [
+#
+# Predio
+#
                 DEF Predio7 Inline { url "src/predio7.wrl"}
             ]
         }
@@ -146,11 +203,17 @@ Transform{
 		Transform {
             translation -16 -0.85 -15
             children [
+#
+# Predio
+#
                 DEF Predio8 Inline { url "src/predio8.wrl"}
             ]
         }
 
-        #Parte central da rua
+#
+# Parte central da rua
+#
+
         Transform {
             translation 0 -2.9 -22
             children [
@@ -169,8 +232,9 @@ Transform{
                 }
             ]
         }
-
-        #Chão
+#
+# Chão bege
+#
         DEF Chao Transform {
             translation 0 -5.35 -12
             children [
@@ -189,8 +253,9 @@ Transform{
                 }
             ]
         }
-
-        #chao lado do rio
+#
+# Chao lado do rio
+#
          Transform {
             translation 10 -5.35 -32
             scale 0.54 1 1
@@ -210,8 +275,9 @@ Transform{
                 }
             ]
          }
-
-         #rio
+#
+# Rio
+#
          Transform {
              translation -10 -5.35 -34.5
              scale 0.54 1 1
@@ -232,6 +298,9 @@ Transform{
              ]
          }
 
+#
+# Cerca do rio
+#
          DEF Cerca Transform {
              rotation 0 1 0 1.57
              translation -2.4 -2.2 -24.6
@@ -242,6 +311,9 @@ Transform{
          Transform {
               translation 0 0 -10
               children [
+#
+# Cerca 
+#
                    USE Cerca
               ]
          }
@@ -256,6 +328,9 @@ Transform{
              rotation 3.14 0 3.14 3.14
              translation 12 -4.4 -22
              children [
+#
+# Cerca
+#
                   USE Cerca
              ]
           }
@@ -265,6 +340,10 @@ Transform{
             rotation 0 1 0 1.57
             scale 0.65 0.65 0.65
             children [
+#
+# Carro
+#
+
                  Inline { url "src/carro.wrl" }
             ]
         }
@@ -274,6 +353,9 @@ Transform{
                 rotation 0 0 0 1.57
                 scale 0.65 0.65 0.65
                 children [
+#
+# Carro
+#
                      Inline { url "src/carro2.wrl" }
                 ]
         }
@@ -283,6 +365,9 @@ Transform{
                 rotation 0 3.14 0 1.57
                 scale 0.65 0.65 0.65
                 children [
+#
+# Carro
+#
                      Inline { url "src/carro3.wrl" }
                 ]
         }
@@ -294,6 +379,9 @@ Transform{
                     DEF CarroEstacionado Transform {
                         scale 0.65 0.65 0.65
                         children [
+#
+# Carro
+#
                             Inline { url "src/carro.wrl"}
                         ]
                     }
@@ -306,6 +394,9 @@ Transform{
                     DEF CarroEstacionado2 Transform {
                         scale 0.65 0.65 0.65
                         children [
+#
+# Carro
+#
                             Inline { url "src/carro2.wrl"}
                         ]
                     }
@@ -318,6 +409,9 @@ Transform{
                     DEF CarroEstacionado3 Transform {
                         scale 0.65 0.65 0.65
                         children [
+#
+# Carro
+#
                             Inline { url "src/carro3.wrl"}
                         ]
                     }
@@ -327,6 +421,9 @@ Transform{
             Transform {
                 translation 17.4 -2.6 -38.2
                 children [
+#
+# Carro
+#
                     USE CarroEstacionado3
                 ]
             }
@@ -334,6 +431,9 @@ Transform{
             Transform {
                 translation 17.4 -2.6 -38.2
                 children [
+#
+# Carro
+#
                     USE CarroEstacionado
                 ]
             }
@@ -341,6 +441,9 @@ Transform{
             Transform {
                 translation 17.4 -2.6 -38.2
                 children [
+#
+# Carro
+#
                     USE CarroEstacionado3
                 ]
             }
@@ -349,6 +452,9 @@ Transform{
                 rotation 0 1 0 3.14
                 translation 15 -2.6 -39.5
                 children [
+#
+# Carro
+#
                     USE CarroEstacionado
                 ]
             }
@@ -357,6 +463,9 @@ Transform{
                 rotation 0 1 0 3.14
                 translation 15 -2.6 -41
                 children [
+#
+# Carro
+#
                     USE CarroEstacionado2
                 ]
             }
@@ -364,6 +473,9 @@ Transform{
             Transform {
                 translation 9.5 -2.6 -41
                 children [
+#
+# Carro
+#
                     USE CarroEstacionado3
                 ]
             }
@@ -372,6 +484,9 @@ Transform{
                 rotation 0 1 0 3.14
                 translation 7 -2.6 -39
                 children [
+#
+# Carro
+#
                     USE CarroEstacionado
                 ]
             }        
@@ -380,9 +495,9 @@ Transform{
 
 }
 
-#
-#  Animation
-#
+##########################################
+# Animation
+#########################################
 DEF Clock TimeSensor {
     cycleInterval 15
     loop TRUE
@@ -432,7 +547,9 @@ DEF Move3 PositionInterpolator {
 ROUTE Clock.fraction_changed TO Move3.set_fraction
 ROUTE Move3.value_changed TO Carro3.set_translation
 
-
+##############################################
+# Fundo
+#############################################
 Background {
     skyColor [
         0.0 0.2 0.7,
@@ -451,6 +568,11 @@ Background {
     leftUrl  "src/textures/bg.jpg"
     rightUrl "src/textures/bg.jpg"
 }
+
+
+###########################################
+# ViewPoint
+###########################################
 
 Viewpoint {
       position	0 0 5
@@ -471,12 +593,12 @@ Viewpoint {
       position	0 0 -50
       orientation	0 4 0  2.49563
       fieldOfView	0.785398
-     description	"Visão do mar"
+     description	"Visão do rio"
 }
 
 Viewpoint {
-      position	0 5 -30
-      orientation	0 2 1  3
+      position	0 5 -34
+      orientation	0 2.8 1  3
       fieldOfView	0.785398
       description	"Visão do semafaro"
 }
